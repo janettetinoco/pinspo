@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { openModal, closeModal } from '../../actions/modal_actions';
-import {signup} from '../../actions/session_actions'
+import {signup, login} from '../../actions/session_actions'
 import SessionForm from './session_form'
+import { withRouter } from 'react-router-dom';
 
 
 const mapStateToProps = ({ errors }) => {
@@ -15,6 +16,7 @@ const mapStateToProps = ({ errors }) => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        demoLogin: (user) => dispatch(login(user)),
         processForm: (user) => dispatch(signup(user)),
         otherForm: (
             <button onClick={() => dispatch(openModal('login'))}>
@@ -25,4 +27,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SessionForm));

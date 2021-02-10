@@ -5,6 +5,7 @@
 .login-form-container {
    display: flex;
    justify-content: center;
+   flex-direction: column;
  }
 
 .login-form {
@@ -18,6 +19,7 @@
    padding: 20px;
    background: white;
    position: relative;
+   align-items: center;
  }
 
  .modal-background {
@@ -70,4 +72,18 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
+ }
+
+ .user-icon{
+   background-color: rgba(163, 154, 154, 0.952);
+   text-decoration: none;
+   border-radius: 50%;
+   border-width: 0;
+   color: white;
+   padding: 25px;
+ }
+
+ .logged-in-header{
+   display: flex;
+   justify-content: space-between;
  }
