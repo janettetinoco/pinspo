@@ -18,12 +18,15 @@ export const receiveErrors = errors => ({
     errors
 });
 
-export const login = (user) => dispatch => (
-    SessionAPIUTil.login(user)
-        .then((user) => receiveCurrentUser(user), 
-            err => (dispatch(receiveErrors(err.responseJSON)))
-        )
-)
+export const login = (user) => dispatch => {
+    return(
+        SessionAPIUTil.login(user)
+            .then((user) => {
+                return dispatch(receiveCurrentUser(user))
+            })
+    )
+}
+
 
 export const logout = () => dispatch => (
     SessionAPIUTil.logout()

@@ -1,17 +1,15 @@
 import React from 'react';
-import Modal from 'react-modal';
 
 class LoggedOffHeader extends React.Component{
-
     render(){
+        const {openModal} = this.props
         return(
-            <>
-                <h1>Pinspo</h1>
-                <button>Log In</button>
-                <Modal isOpen={false}></Modal>
-                <button>Sign Up</button>
-            </>
+            <nav className="nav-buttons">
+                <button className='login-button' onClick={() => openModal('login')}>Login</button>
+                <button className='signup-button' onClick={() => openModal('signup')}>Signup</button>
+            </nav>
         )
+            
     }
 }
 
