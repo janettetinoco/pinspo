@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 class LoggedOffHeader extends React.Component{
     render(){
@@ -6,7 +7,7 @@ class LoggedOffHeader extends React.Component{
         return(
             <div className='header'>
                 <div className="left-nav">
-                    <img src={window.logoURL} className="header-logo" />
+                    <Link to='/'><img src={window.logoURL} className="header-logo" /></Link>
                     <h3>Pinspo</h3>
                 </div>
                 <nav className="nav-buttons">

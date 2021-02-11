@@ -24,7 +24,7 @@ class LoggedInHeader extends React.Component{
         return(
             <div className="header">
                 <div className='left-nav'>
-                    <img src={window.logoURL} className="header-logo" />
+                    <Link to='/home'><img src={window.logoURL} className="header-logo" /></Link>
                     <Link to='/home' className='home-button'>Home</Link>
                 </div>
                 <div className='right-nav'>
