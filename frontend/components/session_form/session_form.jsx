@@ -33,7 +33,7 @@ class SessionForm extends React.Component{
     demoSignIn(e){
         e.preventDefault();
         const demoUser = {
-            email: 'janette@email.com',
+            email: 'demo@email.com',
             password: '1234567'
         }
         this.props.demoLogin(demoUser)
