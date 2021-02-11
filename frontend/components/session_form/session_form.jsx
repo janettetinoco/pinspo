@@ -22,8 +22,8 @@ class SessionForm extends React.Component{
         }
         const user = Object.assign({}, this.state, {username});
         this.props.processForm(user)
-            .then(() => this.props.history.push('/home'))
-            .then(this.props.closeModal);
+            .then(this.props.closeModal)
+            .then(() => this.props.history.push('/home'));
     } 
 
     update(field){
