@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.delete_all
-demo = User.create(username:'Demo', email:'demo@email.com', password:'1234567', age:0);
+demo = User.create(username:'Demo', email:'demo@email.com', password:'1234567', age:1);
 user1 = User.create(username:'Melissa', email:'Melissa@gmail.com', password:'1234567', age:23);
 user2 = User.create(username:'Albert', email:'albert@gmail.com', password:'1234567', age:25);
 user3 = User.create(username:'trey123', email:'trey123@gmail.com', password:'1234567', age:15);

@@ -6,11 +6,12 @@
    display: flex;
    align-items: center;
    flex-direction: column;
+   justify-content: center;
    font-family: 'Fira Sans', sans-serif;
    background: white;
-   min-height: 500px;
+   min-height: 300px;
    width:425px;
-   padding: 30px 10px 20px;
+   padding: 35px 10px;
    border-radius:10px,
 
  }
@@ -33,6 +34,7 @@
    margin-bottom: 30px;
    margin-bottom: 2px;
    font-size: 40px;
+   text-align: center;
  }
 
  .login-form-container .login-input {
@@ -112,3 +114,22 @@
   .demo-button{
     display:inline-block;
   }
+
+  .other-form{
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    align-items:center;
+    text-align: end;
+  }
+  .clickable-link{
+    box-sizing: content-box;
+    padding:2px;
+    text-decoration: underline;
+
+    
+  }
+
+  .clickable-link:hover{
+      cursor: pointer;
+    }

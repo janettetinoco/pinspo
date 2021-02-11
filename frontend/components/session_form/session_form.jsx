@@ -5,6 +5,7 @@ class SessionForm extends React.Component{
     constructor(props){
         super(props);
         this.state= {
+            username:'',
             email: '',
             password: '',
             age: ''
@@ -16,11 +17,7 @@ class SessionForm extends React.Component{
     }
     handleSubmit(e){
         e.preventDefault();
-        let username = this.state.email.split('@')[0];
-        if (username.length === 0){
-            username = ' ' 
-        }
-        const user = Object.assign({}, this.state, {username});
+        const user = Object.assign({}, this.state);
         this.props.processForm(user)
             .then(this.props.closeModal)
             .then(() => this.props.history.push('/home'));
@@ -59,10 +56,11 @@ class SessionForm extends React.Component{
         return(
             <div className="login-form-container">
                 <img src={window.logoURL} className="modal-logo"/>
-                <h3 className='modal-title'>Welcome to Pinspo</h3>
+                {formType === 'signup' ? <h3 className='modal-title'>Welcome to Pinspo</h3> : <h3 className='modal-title'>Welcome Back to Pinspo</h3> }
                 <h3>{formType === 'signup' ? "Find new ideas to try" : ""}</h3>
                 <div className="form-container">
                     <form onSubmit={this.handleSubmit} className='login-form'>
+                        {formType === 'signup' ? <input type='text' className="login-input" value={this.state.username} onChange={this.update('username')} placeholder="Username"></input> : ''}
                         <input type='text' 
                             value={this.state.email}
                             onChange={this.update('email')}
@@ -81,6 +79,10 @@ class SessionForm extends React.Component{
                     </form>
                 </div>
                 {formType === 'signup' ? <button type="submit" onClick={this.demoSignIn} className="demo-button">Continue with Demo Version</button> : ""}
+
+                <div>
+                    {formType   === 'signup' ? <h1 className="other-form">Already have an account? {this.props.otherForm} here</h1> : <h1 className="other-form ">Need an Account? {this.props.otherForm} here</h1>}
+                </div>
             </div>
         )
     }

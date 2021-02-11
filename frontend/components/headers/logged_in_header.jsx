@@ -29,7 +29,7 @@ class LoggedInHeader extends React.Component{
                 </div>
                 <div className='right-nav'>
                     <div className="user-icon">
-                        <Link to={`/users/${this.props.currentUser.id}`} className='user-letter'>{this.props.username[0]}</Link>
+                        <Link to={`/users/${this.props.currentUser}`} className='user-letter'>{this.props.username[0]}</Link>
                     </div>
                     <div className='arrow-dropdown-icon'>
                         <i className="fas fa-chevron-down" onClick={this.showMenu}></i>
