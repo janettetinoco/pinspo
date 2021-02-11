@@ -13,9 +13,12 @@ const App = () => (
             <header>
             </header>
         </div>
+        <AuthRoute exact path="/" component={LoggedOffHeaderContainer} />
+        <ProtectedRoute path="/" component={LoggedInHeaderContainer} />
+        
         <Switch>
-            <ProtectedRoute path="/home" component={LoggedInHeaderContainer} />
-            <Route exact path="/" component={LoggedOffHeaderContainer} />
+            {/* <AuthRoute exact path="/" render={() => <h1>This is the header when we are logged out</h1> }/> */}
+            {/* <ProtectedRoute path="/home" render={()=> <h1>This is the home component</h1>} /> */}
         </Switch>
     </>
 );

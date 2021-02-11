@@ -6,10 +6,27 @@ import {login, logout, receiveCurrentUser} from './actions/session_actions'
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const store = configureStore();
+    let store;
+    if (window.currentUser) {
+        const currentUser  = window.currentUser;
+        const { id } = currentUser;
+        const preloadedState = {
+            entities: {
+                users: {
+                    [id]: currentUser
+                }
+            },
+            session: { currentUser: id }
+        };
+        store = configureStore(preloadedState);
+        delete window.currentUser;
+
+    } else {
+        store = configureStore();
+    }
+
+
     const root = document.getElementById("root");
-
-
 
 
     window.login = login;

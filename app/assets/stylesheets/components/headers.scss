@@ -1,0 +1,88 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    color: rgb(197, 10, 10);
+}
+
+.home-button{
+  font-size: 16px;
+  border-radius: 25px;
+  border-width: 0;
+  background-color: black;
+  color: white;
+  padding: 14px 18px;
+  text-decoration: none;
+}
+
+.red-button {
+     border-radius: 25px;
+     border-width: 0;
+     background-color: rgb(197, 10, 10);
+     color: white;
+     padding: 14px 18px;
+     font-weight: bold;
+     margin-right:10px;
+ }
+
+ .grey-button {
+     border-radius: 25px;
+     border-width: 0;
+     background-color: rgba(211, 211, 211, 0.658);
+     color: black;
+     padding: 14px 18px;
+     font-weight: bold;
+ }
+
+
+ .user-icon{
+   display: flex;
+   box-sizing: border-box;
+   width: 40px;
+   background-color: rgba(163, 154, 154, 0.952);
+   text-decoration: none;
+   border-radius: 50%;
+   border-width: 0;
+   color: white;
+   padding: 7px;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .arrow-dropdown-icon{
+   width: 20px;
+   height: 20px;
+   position: relative;
+   display: inline-block;
+   padding: 10px;
+   margin-left: 5px;
+ }
+
+ .arrow-dropdown-icon:hover{
+   background-color: lightgray;
+   border-radius: 50%;
+ }
+
+ .arrow-dropdown{
+   position: absolute;
+   display:none;
+ }
+
+ .right-nav, .left-nav{
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+ }
+
+.user-letter{
+  left:50%;
+  color: white;
+  font-size: 20px;
+}
+
+

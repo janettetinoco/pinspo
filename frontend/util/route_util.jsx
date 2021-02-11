@@ -12,18 +12,18 @@ const mapStateToProps = state => {
 //<AuthRoute path = "" component={} />
 
 //component: Componetn changes the variable name component  to Capitalized Component
-const Auth = ({ loggedIn, path, component: Component }) => {
+const Auth = ({ loggedIn, path, component: Component }) => {//redirects if logged out
     return (
         <Route
             path={path}
             render={props => (
-                loggedIn ? <Redirect to="/" /> : <Component {...props} />
+                loggedIn ? <Redirect to="/home" /> : <Component {...props} />
             )}
         />
     )
 };
 
-const Protected = ({ loggedIn, path, component: Component }) => {
+const Protected = ({ loggedIn, path, component: Component }) => {//only accessible when logged in
     return (
         <Route
             path={path}
