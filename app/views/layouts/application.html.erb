@@ -17,7 +17,9 @@
       @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
     </style>
-
+    <script type="text/javascript">
+      window.logoURL = "<%= image_url('favicon.png') %>";
+    </script>
 
     <%= favicon_link_tag 'favicon.png' %>
     <% if current_user %>

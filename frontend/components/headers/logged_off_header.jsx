@@ -5,7 +5,10 @@ class LoggedOffHeader extends React.Component{
         const {openModal} = this.props
         return(
             <div className='header'>
-                <h3>Pinspo</h3>
+                <div className="left-nav">
+                    <img src={window.logoURL} className="header-logo" />
+                    <h3>Pinspo</h3>
+                </div>
                 <nav className="nav-buttons">
                     <button className='red-button' onClick={() => openModal('login')}>Login</button>
                     <button className='grey-button' onClick={() => openModal('signup')}>Signup</button>

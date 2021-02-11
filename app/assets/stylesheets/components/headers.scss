@@ -3,7 +3,7 @@
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 30px;
     font-size: 20px;
     font-family: 'Fira Sans', sans-serif;
     color: rgb(197, 10, 10);
@@ -49,7 +49,8 @@
  .user-icon{
    display: flex;
    box-sizing: border-box;
-   width: 40px;
+   width:40px;
+   height:40px;
    background-color: rgba(163, 154, 154, 0.952);
    text-decoration: none;
    border-radius: 50%;
@@ -73,6 +74,7 @@
  .arrow-dropdown-icon:hover{
    background-color: lightgray;
    border-radius: 50%;
+   color:black;
    cursor: pointer;
  }
 
@@ -86,6 +88,7 @@
    display: flex;
    flex-direction: row;
    justify-content: space-evenly;
+   align-items:center;
  }
 
 .user-letter{
@@ -94,6 +97,12 @@
   left:50%;
   color: white;
   font-size: 20px;
+}
+
+.header-logo{
+  width:35px;
+  height:35px;
+  margin-right: 5px;
 }
 
 

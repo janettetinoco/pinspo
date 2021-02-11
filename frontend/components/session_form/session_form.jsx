@@ -58,6 +58,7 @@ class SessionForm extends React.Component{
         const {formType} = this.props
         return(
             <div className="login-form-container">
+                <img src={window.logoURL} className="modal-logo"/>
                 <h3 className='modal-title'>Welcome to Pinspo</h3>
                 <h3>{formType === 'signup' ? "Find new ideas to try" : ""}</h3>
                 <div className="form-container">
