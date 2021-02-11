@@ -66,7 +66,7 @@ class SessionForm extends React.Component{
                             value={this.state.email}
                             onChange={this.update('email')}
                             className="login-input"
-                            placeholder="Email"></input>
+                            placeholder="Email" required></input>
                         <input type='password' 
                             value={this.state.password}
                             onChange={this.update('password')}
@@ -74,8 +74,9 @@ class SessionForm extends React.Component{
                             placeholder="Password"></input>
                             {/* {formType === 'login' ? 'Create a Password' : 'Password'}</input> */}
                         {formType === 'signup' ? <input type='text' className="login-input" value={this.state.age} onChange={this.update('age')} placeholder="age"></input> : ''}
-                        <input className="session-submit" type="submit" value={formType} />
                         {this.renderErrors()}
+                        <input className="session-submit" type="submit" value={formType} />
+                        
                     </form>
                 </div>
                 {formType === 'signup' ? <button type="submit" onClick={this.demoSignIn} className="demo-button">Continue with Demo Version</button> : ""}
