@@ -4,6 +4,16 @@ class User < ApplicationRecord
     validates :password, length: {minimum: 6}, allow_nil: true
     validates :age, presence:true, numericality: { only_integer: true, greater_than: 0, message: 'needs to be fixed'}
 
+    has_many :pins,
+        primary_key: :id,
+        foreign_key: :author_id,
+        class_name: :Pin
+
+    has_many :boards,
+        primary_key: :id,
+        foreign_key: :author_id,
+        class_name: :Board
+
     attr_reader :password
     after_initialize :ensure_session_token
 
