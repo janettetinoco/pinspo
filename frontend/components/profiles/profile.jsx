@@ -21,12 +21,12 @@ class Profile extends React.Component{
                     </div>
                     <div id="username"><h1>{user.username}</h1></div>
                     <div id="user-handle"><h3>@{user.username}</h3></div>
-                    <div>
-                        <div>Following</div>
-                        <span>.</span>
-                        <div>Followers</div>
+                    <div className="followers-info">
+                        <div> 0 followers</div>
+                        <span>&middot;</span>
+                        <div>0 following</div>
                     </div>
-                    <div>Options</div>
+                    <div id="options-bar">Options</div>
                     <Boards boards={this.props.boards}/>
                 </div>
             </div>

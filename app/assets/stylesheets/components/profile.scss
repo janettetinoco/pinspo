@@ -1,24 +1,57 @@
-.profile-component{
+
+
+.profile-head{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-    .user-icon{
-        width:120px;
-        height:120px;
-
-        .user-letter{
-            text-transform: capitalize;
-            font-size: 40px;
-        }
-    }
-    #username{
-        font-family: 'Roboto', sans-serif;
-        font-size: 35px;
-        margin: 4px 0px 4px 0px;
-    }
-
-    
-
-    
+    align-items:center;
 }
+
+.profile-head .user-icon{
+    display: flex;
+    width:105px;
+    height:105px;
+    margin-right: 0px;
+
+
+    .user-letter{
+        text-transform: capitalize;
+        font-size: 40px;
+        text-align: center;
+        justify-content: center;
+    }
+}
+#username{
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    margin: 10px 0px 10px 0px;
+    justify-content: center;
+    h1{
+        text-align: center;
+    }
+}
+
+#user-handle{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 4px 0px 4px 0px;
+}
+
+.followers-info{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px 10px 0px;
+    div{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+
+    }
+
+    span{
+        padding: 0px 6px;
+        
+    }
+}
+
+
+    

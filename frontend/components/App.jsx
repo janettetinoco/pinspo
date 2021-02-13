@@ -16,13 +16,12 @@ const App = () => (
             <header>
             </header>
         </div>
-        <AuthRoute exact path="/" component={LoggedOffHeaderContainer} />
         <ProtectedRoute path="/" component={LoggedInHeaderContainer} />
         
         <Switch>
-            {/* <AuthRoute exact path="/" render={() => <h1>This is the header when we are logged out</h1> }/> */}
+            <AuthRoute exact path="/" component={LoggedOffHeaderContainer} />
             <Route path='/404' render={()=> <h1 id="error-page">404 Page</h1>} />
-            <Route path='/users/:userId' component={Profile}/>
+            <ProtectedRoute exact path='/users/:userId' component={Profile}/>
             <Route exact path="/" render={() => <h1> </h1>} />
             <Route exact path="/home" render={() => <h1> </h1>} />
             <Redirect to="/404" />
