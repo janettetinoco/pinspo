@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 class LoggedInHeader extends React.Component{
     constructor(props){
@@ -29,7 +29,8 @@ class LoggedInHeader extends React.Component{
                 </div>
                 <div className='right-nav'>
                     <div className="user-icon">
-                        <Link to={`/users/${this.props.currentUser}`} className='user-letter'>{this.props.username[0]}</Link>
+                        <p onClick={() => this.props.history.push(`/users/${this.props.currentUser}`)}>{this.props.username[0]}</p>
+                        {/* <Link to={`/users/${this.props.currentUser}`} className='user-letter'>{this.props.username[0]}</Link> */}
                     </div>
                     <div className='arrow-dropdown-icon'>
                         <i className="fas fa-chevron-down" onClick={this.showMenu}></i>
@@ -46,4 +47,4 @@ class LoggedInHeader extends React.Component{
     }
 }
 
-export default LoggedInHeader
+export default withRouter(LoggedInHeader)

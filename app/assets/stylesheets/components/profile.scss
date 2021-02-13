@@ -1,0 +1,24 @@
+.profile-component{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .user-icon{
+        width:120px;
+        height:120px;
+
+        .user-letter{
+            text-transform: capitalize;
+            font-size: 40px;
+        }
+    }
+    #username{
+        font-family: 'Roboto', sans-serif;
+        font-size: 35px;
+        margin: 4px 0px 4px 0px;
+    }
+
+    
+
+    
+}

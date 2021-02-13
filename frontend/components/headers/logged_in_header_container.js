@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import LoggedInHeader from './logged_in_header';
+import {getUserBoards} from '../../actions/board_actions'
 
 const mapStateToProps = ({ entities, session }) => {
     return ({

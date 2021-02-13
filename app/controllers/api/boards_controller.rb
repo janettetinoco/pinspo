@@ -9,9 +9,9 @@ class Api::BoardsController < ApplicationController
     end
 
     def show
-         @board = Board.find_by(id: params[:id])
-        if @pin
-            render json: 'api/boards/show'
+        @board = Board.find_by(id: params[:id])
+        if @board
+            render :show
         else
             render json: ['Board not found'], status: 422
         end

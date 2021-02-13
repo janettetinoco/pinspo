@@ -37,32 +37,37 @@ export const receiveUserBoards = (userProfile) => {
 
 
 
-
+//gets a single board and its info
 export const getBoard = (boardId) => dispatch => {
-        return BoardAPIUtil.showBoard(boardId)
+        return BoardAPIUtil.fetchBoard(boardId)
             .then((board) => dispatch(receiveBoard(board)),
                 (errors) =>dispatch(receiveBoardErrors(errors.responseJSON)));
 }
 
-
+//creates a board
 export const createBoard = (board) => dispatch => {
     return BoardAPIUtil.createBoard(board)
         .then((board) => dispatch(receiveBoard(board)),
             (errors) => dispatch(receiveBoardErrors(errors.responseJSON)));
 }
 
+//updates a current board
 export const updateBoard = (board) => dispatch => {
-    return BoardAPIUtil.showBoard(board.id)
+    return BoardAPIUtil.fetchBoard(board.id)
         .then((board) => dispatch(receiveBoard(board)),
             (errors) => dispatch(receiveBoardErrors(errors.responseJSON)));
 }
 
+
+//deletes a board
 export const deleteBoard = (boardId) => dispatch => {
     return BoardAPIUtil.destroyBoard(boardId)
         .then(() => dispatch(removeBoard(boardId)),
             (errors) => dispatch(receiveBoardErrors(errors.responseJSON)));
 }
 
+
+//pulls all boards from user given user id
 export const getUserBoards = (userId) => dispatch => {
     return fetchUser(userId)
         .then((user) => dispatch(receiveUserBoards(user)),

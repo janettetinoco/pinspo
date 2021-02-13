@@ -8,10 +8,12 @@ const usersReducer = (state = {}, action) => {
         case RECEIVE_CURRENT_USER:
             return Object.assign({}, state, {[action.currentUser.id]: action.currentUser});
         case LOGOUT_CURRENT_USER:
-            return {};
+            return {}; 
         default:
             return state;
     }
 }
 
 export default usersReducer;
+
+////build case to merge in the user's profile information

@@ -16,6 +16,7 @@ class SessionForm extends React.Component{
         this.renderErrors = this.renderErrors.bind(this)
     }
     handleSubmit(e){
+        debugger
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
@@ -81,7 +82,7 @@ class SessionForm extends React.Component{
                 {formType === 'signup' ? <button type="submit" onClick={this.demoSignIn} className="demo-button">Continue with Demo Version</button> : ""}
 
                 <div>
-                    {formType   === 'signup' ? <h1 className="other-form">Already have an account? {this.props.otherForm} here</h1> : <h1 className="other-form ">Need an Account? {this.props.otherForm} here</h1>}
+                    {formType   === 'signup' ? <div className="other-form">Already have an account? {this.props.otherForm} here</div> : <div className="other-form ">Need an Account? {this.props.otherForm} here</div>}
                 </div>
             </div>
         )
