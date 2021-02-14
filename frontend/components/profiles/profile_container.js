@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import { getUserBoards, createBoard} from '../../actions/board_actions';
 import Profile from './profile'
+import {openModal} from '../../actions/modal_actions'
 
 const mapStateToProps = (state = {}, ownProps) =>{
     const userId = parseInt(ownProps.match.params.userId)

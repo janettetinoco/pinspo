@@ -57,17 +57,26 @@
     display: flex;
     justify-content: flex-end;
     padding: 0px 8px 12px 8px;
-
-    #add-icon{
-        font-size: 18px;
-        padding:9px;
+    
+    .plus-dropdown-icon{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        display: inline-block;
+        padding: 10px;
+        margin-left: 5px;
+        color:grey;
     }
-    #add-icon:hover{
-        background-color: rgb(224, 221, 221);
+    .plus-dropdown-icon:hover{
+        background-color: lightgray;
         border-radius: 50%;
-
+        color:black;
+        cursor: pointer;
     }
-
+}
+.plus-dropdown{
+  position: absolute;
+  display:none;
 }
 
 

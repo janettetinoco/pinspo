@@ -26,70 +26,70 @@
   text-decoration: none;
 }
 
-.red-button {
-     border-radius: 25px;
-     border-width: 0;
-     background-color: rgb(197, 10, 10);
-     color: white;
-     padding: 14px 18px;
-     font-weight: bold;
-     margin-right:10px;
- }
+.red-button{
+  border-radius: 25px;
+  border-width: 0;
+  background-color: rgb(197, 10, 10);
+  color: white;
+  padding: 14px 18px;
+  font-weight: bold;
+  margin-right:10px;
+}
 
- .grey-button {
-     border-radius: 25px;
-     border-width: 0;
-     background-color: rgba(211, 211, 211, 0.658);
-     color: black;
-     padding: 14px 18px;
-     font-weight: bold;
- }
+.grey-button {
+  border-radius: 25px;
+  border-width: 0;
+  background-color: rgba(211, 211, 211, 0.658);
+  color: black;
+  padding: 14px 18px;
+  font-weight: bold;
+}
 
 
- .user-icon{
-   display: flex;
-   box-sizing: border-box;
-   width:40px;
-   height:40px;
-   background-color: rgba(163, 154, 154, 0.952);
-   text-decoration: none;
-   border-radius: 50%;
-   border-width: 0;
-   color: white;
-   padding: 7px;
-   justify-content: center;
-   align-items: center;
- }
+.user-icon{
+  display: flex;
+  box-sizing: border-box;
+  width:40px;
+  height:40px;
+  background-color: rgba(163, 154, 154, 0.952);
+  text-decoration: none;
+  border-radius: 50%;
+  border-width: 0;
+  color: white;
+  padding: 7px;
+  justify-content: center;
+  align-items: center;
+}
 
- .arrow-dropdown-icon{
-   width: 20px;
-   height: 20px;
-   position: relative;
-   display: inline-block;
-   padding: 10px;
-   margin-left: 5px;
-   color:grey;
- }
+.arrow-dropdown-icon{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  margin-left: 5px;
+  color:grey;
+}
 
- .arrow-dropdown-icon:hover{
-   background-color: lightgray;
-   border-radius: 50%;
-   color:black;
-   cursor: pointer;
- }
+.arrow-dropdown-icon:hover{
+  background-color: lightgray;
+  border-radius: 50%;
+  color:black;
+  cursor: pointer;
+}
 
- .arrow-dropdown{
-   position: absolute;
-   display:none;
- }
+.arrow-dropdown{
+  position: absolute;
+  display:none;
+}
 
- .right-nav, .left-nav{
-   box-sizing: border-box;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-   align-items:center;
- }
+.right-nav, .left-nav{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items:center;
+}
 
 .user-letter{
   text-transform: capitalize;

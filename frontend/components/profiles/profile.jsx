@@ -39,13 +39,13 @@ class Profile extends React.Component{
                     </div>
                 </div>
                 <div id="options-bar">
-                    <div id="add-icon">
-                        <i className="fas fa-plus" onClick={this.showMenu}></i>
+                    <div className="plus-dropdown-icon" onClick={this.showMenu}>
+                        <i className="fas fa-plus" ></i>
                         <div className='plus-dropdown'>
                             <h1 className="dropdown-subtitle">Create</h1>
                             <ul >
-                                <li onClick={() => openModal('newBoard')} className="logout-button">Pin</li>
-                                <li className="logout-button">Board</li>
+                                <li onClick={() => this.props.openModal('newBoard')} className="menu-option">Board</li>
+                                <li className="menu-option">Pin</li>
                             </ul>
                         </div>
                     </div>

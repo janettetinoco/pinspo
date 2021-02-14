@@ -32,12 +32,12 @@ class LoggedInHeader extends React.Component{
                         <p onClick={() => this.props.history.push(`/users/${this.props.currentUser}`)}>{this.props.username[0]}</p>
                         {/* <Link to={`/users/${this.props.currentUser}`} className='user-letter'>{this.props.username[0]}</Link> */}
                     </div>
-                    <div className='arrow-dropdown-icon'>
-                        <i className="fas fa-chevron-down" onClick={this.showMenu}></i>
+                    <div className='arrow-dropdown-icon' onClick={this.showMenu}>
+                        <i className="fas fa-chevron-down" ></i>
                         <div className='arrow-dropdown'>
                             <h1 className="dropdown-subtitle">Options</h1>
                             <ul >
-                                <li onClick={this.handleLogout} className="logout-button">Log out</li>
+                                <li onClick={this.handleLogout} className="menu-option">Log out</li>
                             </ul>
                         </div>
                     </div >
