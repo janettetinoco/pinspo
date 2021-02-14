@@ -2,6 +2,19 @@ import React from 'react';
 import Boards from './boards'
 
 class Profile extends React.Component{
+    constructor(props){
+        super(props);
+
+        this.showMenu = this.showMenu.bind(this)
+    }
+
+
+    showMenu() {
+        return (
+            document.getElementsByClassName("plus-dropdown")[0].classList.toggle("dropdown-open")
+        )
+    }
+
     componentDidMount(){
         this.props.getUserBoards(this.props.userId)
     }
@@ -27,11 +40,17 @@ class Profile extends React.Component{
                 </div>
                 <div id="options-bar">
                     <div id="add-icon">
-                        <i className="fas fa-plus"></i>
+                        <i className="fas fa-plus" onClick={this.showMenu}></i>
+                        <div className='plus-dropdown'>
+                            <h1 className="dropdown-subtitle">Create</h1>
+                            <ul >
+                                <li onClick={() => openModal('newBoard')} className="logout-button">Pin</li>
+                                <li className="logout-button">Board</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div >
-                    Hello
                     <Boards boards={this.props.boards}/>
                 </div>
             </div>
