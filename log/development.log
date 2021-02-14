@@ -23926,3 +23926,462 @@ Processing by Api::UsersController#show as JSON
 Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/" for ::1 at 2021-02-14 12:18:03 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 310ms (Views: 290.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:18:04 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (8.9ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 12:24:28 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 798ms (Views: 791.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:24:29 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (3.0ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (18.5ms)
+Completed 200 OK in 31ms (Views: 26.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 12:29:22 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 693ms (Views: 688.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:29:23 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (1.0ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (51.2ms)
+Completed 200 OK in 68ms (Views: 60.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 12:32:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 416ms (Views: 410.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:32:32 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (2.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (26.4ms)
+Completed 200 OK in 40ms (Views: 35.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 12:33:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 585ms (Views: 580.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:33:24 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (11.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (16.6ms)
+Completed 200 OK in 28ms (Views: 15.5ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 12:38:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 280ms (Views: 274.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:38:43 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (2.6ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (8.8ms)
+Completed 200 OK in 23ms (Views: 17.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 12:39:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 243ms (Views: 239.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:39:25 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (6.8ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (9.9ms)
+Completed 200 OK in 27ms (Views: 16.2ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 12:39:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:39:27 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (1.2ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (6.2ms)
+Completed 200 OK in 23ms (Views: 15.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 12:40:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 198ms (Views: 195.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:40:30 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (1.8ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (5.4ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 12:41:06 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 164ms (Views: 161.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:41:06 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (29.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (32.6ms)
+Completed 200 OK in 48ms (Views: 14.8ms | ActiveRecord: 32.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 12:43:20 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 237ms (Views: 232.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:43:21 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (15.7ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (24.9ms)
+Completed 200 OK in 40ms (Views: 21.7ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 12:44:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 226ms (Views: 222.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:44:09 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (1.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (4.8ms)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 12:47:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 462ms (Views: 456.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:47:36 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (2.1ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (17.6ms)
+Completed 200 OK in 58ms (Views: 53.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 12:59:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 414ms (Views: 409.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 12:59:06 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (1.9ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (14.8ms)
+Completed 200 OK in 35ms (Views: 30.0ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/api/boards" for ::1 at 2021-02-14 12:59:30 -0800
+Processing by Api::BoardsController#create as JSON
+  Parameters: {"board"=>{"title"=>"places to go", "description"=>""}}
+  [1m[35m (5.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/boards_controller.rb:4
+  [1m[36mBoard Exists (14.9ms)[0m  [1m[34mSELECT  1 AS one FROM "boards" WHERE "boards"."title" = $1 AND "boards"."author_id" IS NULL LIMIT $2[0m  [["title", "places to go"], ["LIMIT", 1]]
+  ↳ app/controllers/api/boards_controller.rb:4
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/boards_controller.rb:4
+Completed 422 Unprocessable Entity in 44ms (Views: 0.3ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/__better_errors" for ::1 at 2021-02-14 12:59:44 -0800
+Started POST "/__better_errors/8f88523843b8f340/variables" for ::1 at 2021-02-14 12:59:44 -0800
+Started GET "/" for ::1 at 2021-02-14 13:00:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 86ms (Views: 78.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 13:00:48 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (7.6ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 13:05:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 462ms (Views: 456.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 13:05:03 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (10.7ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (18.9ms)
+Completed 200 OK in 30ms (Views: 18.2ms | ActiveRecord: 11.2ms)
+
+
+Started POST "/api/boards" for ::1 at 2021-02-14 13:05:12 -0800
+Processing by Api::BoardsController#create as JSON
+  Parameters: {"board"=>{"title"=>"where to go", "description"=>"", "author_id"=>"16"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/boards_controller.rb:4
+  [1m[36mBoard Exists (4.3ms)[0m  [1m[34mSELECT  1 AS one FROM "boards" WHERE "boards"."title" = $1 AND "boards"."author_id" = $2 LIMIT $3[0m  [["title", "where to go"], ["author_id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/boards_controller.rb:4
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/boards_controller.rb:4
+  [1m[36mBoard Create (17.5ms)[0m  [1m[32mINSERT INTO "boards" ("title", "description", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "where to go"], ["description", ""], ["author_id", 16], ["created_at", "2021-02-14 21:05:12.766084"], ["updated_at", "2021-02-14 21:05:12.766084"]]
+  ↳ app/controllers/api/boards_controller.rb:4
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/boards_controller.rb:4
+Completed 200 OK in 52ms (Views: 0.2ms | ActiveRecord: 24.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 13:06:17 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 382ms (Views: 379.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 13:06:17 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (1.9ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (14.5ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 13:06:24 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 13:06:24 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (4.6ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (6.9ms)
+Completed 200 OK in 16ms (Views: 9.2ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/api/boards" for ::1 at 2021-02-14 13:06:34 -0800
+Processing by Api::BoardsController#create as JSON
+  Parameters: {"board"=>{"title"=>"go", "description"=>"", "author_id"=>"16"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/boards_controller.rb:4
+  [1m[36mBoard Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "boards" WHERE "boards"."title" = $1 AND "boards"."author_id" = $2 LIMIT $3[0m  [["title", "go"], ["author_id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/boards_controller.rb:4
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/boards_controller.rb:4
+  [1m[36mBoard Create (0.5ms)[0m  [1m[32mINSERT INTO "boards" ("title", "description", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "go"], ["description", ""], ["author_id", 16], ["created_at", "2021-02-14 21:06:34.014380"], ["updated_at", "2021-02-14 21:06:34.014380"]]
+  ↳ app/controllers/api/boards_controller.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/boards_controller.rb:4
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/api/boards" for ::1 at 2021-02-14 13:07:02 -0800
+Processing by Api::BoardsController#create as JSON
+  Parameters: {"board"=>{"title"=>"go", "description"=>"", "author_id"=>"16"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/boards_controller.rb:4
+  [1m[36mBoard Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "boards" WHERE "boards"."title" = $1 AND "boards"."author_id" = $2 LIMIT $3[0m  [["title", "go"], ["author_id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/boards_controller.rb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/boards_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/boards_controller.rb:4
+Completed 422 Unprocessable Entity in 9ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-14 13:07:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tEdBPYXL2BcNt1JOuMoSOg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/users/16" for ::1 at 2021-02-14 13:07:13 -0800
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  Rendering api/users/show.json.jbuilder
+  [1m[36mBoard Load (3.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."author_id" = $1[0m  [["author_id", 16]]
+  ↳ app/views/api/users/show.json.jbuilder:3
+  Rendered api/users/show.json.jbuilder (6.5ms)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 3.6ms)
+
+

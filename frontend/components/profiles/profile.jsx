@@ -19,6 +19,12 @@ class Profile extends React.Component{
         this.props.getUserBoards(this.props.userId)
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.match.params.userId !== prevProps.match.params.userId || ) {
+            this.props.getBoards(this.props.match.params.userId)
+        }
+    }
+
     render(){
         if (this.props.boards === null){
             return null

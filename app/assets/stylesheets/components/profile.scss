@@ -128,3 +128,22 @@
     }
 
 }
+
+.new-board-form{
+    display: flex;
+    flex-direction: column;
+
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0px;
+       box-sizing: border-box;
+    }
+
+    .board-info{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        font-size: 12px;
+        display: inline-block;
+    }
+}

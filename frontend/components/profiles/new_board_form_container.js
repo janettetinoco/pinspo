@@ -5,9 +5,10 @@ import {withRouter} from 'react-router-dom';
 import {createBoard} from '../../actions/board_actions';
 import NewBoardForm from './new_board_form'
 
-const mapStateToProps = ({errors}) => {
+const mapStateToProps = ({errors, session}) => {
     return{
-        errors: errors.board
+        errors: errors.board,
+        author_id: session.currentUser
     }
 }
 
