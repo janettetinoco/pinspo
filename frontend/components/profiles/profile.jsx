@@ -3,12 +3,10 @@ import Boards from './boards'
 
 class Profile extends React.Component{
     componentDidMount(){
-        // debugger
         this.props.getUserBoards(this.props.userId)
     }
 
     render(){
-        // debugger
         if (this.props.boards === null){
             return null
         }
@@ -26,7 +24,14 @@ class Profile extends React.Component{
                         <span>&middot;</span>
                         <div>0 following</div>
                     </div>
-                    <div id="options-bar">Options</div>
+                </div>
+                <div id="options-bar">
+                    <div id="add-icon">
+                        <i className="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div >
+                    Hello
                     <Boards boards={this.props.boards}/>
                 </div>
             </div>

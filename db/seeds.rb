@@ -12,3 +12,4 @@ user1 = User.create(username:'Melissa', email:'Melissa@gmail.com', password:'123
 user2 = User.create(username:'Albert', email:'albert@gmail.com', password:'1234567', age:25);
 user3 = User.create(username:'trey123', email:'trey123@gmail.com', password:'1234567', age:15);
 user4 = User.create(username:'cindy15', email:'cindy12@gmail.com', password:'1234567', age:21);
+user5 = User.create(username:'Tony1351', email:'tony@gmail.com', password:'1234567', age:26);
