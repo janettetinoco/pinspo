@@ -18,7 +18,8 @@ function Modal({ modal, closeModal }){//keep adding more components that are mod
             component = <SignupFormContainer />;
             break;
         case 'newBoard':
-            component = <NewBoardFormContainer />
+            component = <NewBoardFormContainer />;
+            break;
         default:
             return null;
     }

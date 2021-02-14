@@ -2,10 +2,11 @@ import React from 'react';
 
 class NewBoardForm extends React.Component{
     constructor(props){
-        this.state = {
-            title: ''
-        }
         super(props);
+        this.state = {
+            title: '',
+            description: ''
+        }
     }
 
     update(field) {
@@ -13,14 +14,13 @@ class NewBoardForm extends React.Component{
     }
 
     render(){
-        debugger
         return(
-            <div>
+            <div className="login-form-container">
                 <div>
-                    <h2>Create board</h2>
+                    <h2 className="modal-title">Create board</h2>
                 </div>
                 <div>
-                    <div>
+                    <div className="form-container">
                         <form>
                             <label>Name</label>
                             <input type="text" placeholder='Like "Places to Travel" or "Recipes to Try" ' value={this.state.title} onChange={this.update('title')}></input>
