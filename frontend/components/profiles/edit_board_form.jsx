@@ -21,7 +21,6 @@ class EditBoard extends React.Component{
 
     handleSubmit(){
         const board = Object.assign({}, { id: this.props.board.id, author_id: this.props.board.author_id, title: this.state.title, description: this.state.description })
-        // debugger
         this.props.updateBoard(board)
             .then(this.props.closeModal());
     }

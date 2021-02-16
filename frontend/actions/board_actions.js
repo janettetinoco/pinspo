@@ -54,7 +54,6 @@ export const createBoard = (board) => dispatch => {
 
 //updates a current board
 export const updateBoard = (board) => dispatch => {
-    // debugger
     return BoardAPIUtil.updateBoard(board)
         .then((board) => dispatch(receiveUserBoards(board.author_id)),
             (errors) => {
