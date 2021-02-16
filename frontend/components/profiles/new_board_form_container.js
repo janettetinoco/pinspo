@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import {withRouter} from 'react-router-dom';
-import {createBoard} from '../../actions/board_actions';
+import {createBoard,getUserBoards} from '../../actions/board_actions';
 import NewBoardForm from './new_board_form'
 
 const mapStateToProps = ({errors, session}) => {
@@ -15,7 +15,9 @@ const mapStateToProps = ({errors, session}) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         submitNewBoard: (board) => dispatch(createBoard(board)),
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
+        getUserBoards: (id) => dispatch(getUserBoards(id))
+
     }
 }
 

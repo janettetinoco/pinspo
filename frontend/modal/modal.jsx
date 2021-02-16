@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../components/session_form/login_form_container';
 import SignupFormContainer from '../components/session_form/signup_form_container';
 import NewBoardFormContainer from '../components/profiles/new_board_form_container';
+import EditBoardFormContainer from '../components/profiles/edit_board_form_container';
 
 function Modal({ modal, closeModal }){//keep adding more components that are modals here
     if (!modal) {
@@ -19,6 +20,9 @@ function Modal({ modal, closeModal }){//keep adding more components that are mod
             break;
         case 'newBoard':
             component = <NewBoardFormContainer />;
+            break;
+        case 'editBoard':
+            component = <EditBoardFormContainer />
             break;
         default:
             return null;

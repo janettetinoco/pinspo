@@ -47,7 +47,9 @@ export const getBoard = (boardId) => dispatch => {
 //creates a board
 export const createBoard = (board) => dispatch => {
     return BoardAPIUtil.createBoard(board)
-        .then((board) => dispatch(receiveBoard(board)),
+        .then((board) => {
+            // debugger
+            dispatch(receiveBoard(board))},
             (errors) => dispatch(receiveBoardErrors(errors.responseJSON)));
 }
 
@@ -55,7 +57,9 @@ export const createBoard = (board) => dispatch => {
 export const updateBoard = (board) => dispatch => {
     return BoardAPIUtil.fetchBoard(board.id)
         .then((board) => dispatch(receiveBoard(board)),
-            (errors) => dispatch(receiveBoardErrors(errors.responseJSON)));
+            (errors) => {
+                // debugger 
+                dispatch(receiveBoardErrors(errors.responseJSON))});
 }
 
 
@@ -73,4 +77,5 @@ export const getUserBoards = (userId) => dispatch => {
         .then((user) => dispatch(receiveUserBoards(user)),
             (errors) => dispatch(receiveBoardErrors(errors.responseJSON)));
 }
+
 

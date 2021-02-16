@@ -18,7 +18,8 @@ class NewBoardForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.submitNewBoard(this.state).then(()=> this.props.closeModal())
+        this.props.submitNewBoard(this.state).then(this.props.closeModal)
+            .then(() => this.props.getUserBoards(this.props.author_id))
     }
 
     render(){
@@ -31,16 +32,18 @@ class NewBoardForm extends React.Component{
                     <div >
                         <form className="form-container"> 
                             <label className="board-info">Name</label>
-                            <input type="text" placeholder='Like "Places to Travel" or "Recipes to Try" ' value={this.state.title} onChange={this.update('title')}></input>
+                            <div className="board-input">
+                                <input type="text" placeholder='Like "Places to Travel" or "Recipes to Try" ' value={this.state.title} onChange={this.update('title')}></input>
+                            </div>
                             <label className="board-info">Description</label>
-                            <input type="text" placeholder='Like "places in the US" or "Crock Pot recipes" ' value={this.state.description} onChange={this.update('description')}></input>
+                            <div className="board-input">
+                                <input type="text" placeholder='Like "places in the US" or "Crock Pot recipes" ' value={this.state.description} onChange={this.update('description')}></input>
+                            </div>
                         </form>   
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <button onClick={this.handleSubmit}>Create</button>
-                    </div>
+                <div className="create-button-div">
+                    <button onClick={this.handleSubmit} className="create-button">Create</button>
                 </div>
             </div>
         )

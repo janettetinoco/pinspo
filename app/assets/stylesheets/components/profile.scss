@@ -73,6 +73,28 @@
         color:black;
         cursor: pointer;
     }
+
+    .dropdown-open{
+   position: absolute;
+   display:block;
+   z-index: 4;
+   right: 10px;
+   bottom: -80px;
+   background-color: white;
+   border-radius: 10px;
+   border: 0px;
+   width: 200px;
+   margin-left: 10px;
+   box-shadow: 0 3px 4px 0 rgba(189, 189, 189, 0.356);
+
+   h1{
+       font-family: 'Hind Siliguri', sans-serif;
+       font-size: 12px;
+       padding: 13px 0px 10px 0px;
+       margin-left: 10px;
+       color: rgba(48, 46, 46, 0.507);
+   }
+}
 }
 .plus-dropdown{
   position: absolute;
@@ -83,10 +105,14 @@
 .boards-grid{
     padding: 0px 50px;
     display:grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: repeat(5, 265px);
+    grid-auto-rows: 225px;
+    margin: 0;
+    justify-content: center;
 
-
+    .board{
+        padding:4px;
+    }
     .board-images{
         position: relative;
         height:160px;
@@ -96,10 +122,9 @@
     }
     .pen-icon{
         position: absolute;
-        display: block;
+        display: none;
         
         #pen{
-            box-sizing:border-box;
             padding:3px;
             border-radius: 50%;
             font-size: 100%;
@@ -109,22 +134,13 @@
     .board-title{
         font-size: 20px;
         font-family: 'Roboto', sans-serif;
-        margin-top: 5px;
+        margin-top: 2px;
     }
     .board-info{
         font-family: 'Roboto', sans-serif;
         font-weight: 100;
         font-size: 12px;
-    }
-
-    .pen-icon-open{
-        position: absolute;
-        display: block;
-        font-size: 30px;
-        color:rgb(235, 231, 231);
-        background-color: rgb(90, 90, 90);
-        bottom:0;
-        right:0; 
+        height: 40px;
     }
 
 }
@@ -132,18 +148,66 @@
 .new-board-form{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
 
     .form-container{
         display: flex;
         flex-direction: column;
         padding: 5px 0px;
-       box-sizing: border-box;
+        box-sizing: border-box;
+        width: 400px;
+
+        .board-info{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .board-input{
+            border-radius: 10px;
+            border: 2px solid rgb(231, 230, 230);
+            height:35px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 7px;
+
+            input{
+                width:100%;
+                background-color: transparent;
+                border-width: 0;
+                padding-left: 7px;
+            }
+        }
+
     }
 
-    .board-info{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 100;
-        font-size: 12px;
-        display: inline-block;
+}
+
+.create-button-div{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 45px;
+    .create-button{
+        border-radius: 20px;
+        border-width:0px;
+        background-color: rgb(241, 237, 237);
+        color: rgba(136, 135, 135, 0.822);
+        padding:10px;
+        font-size: 14px;
+        font-family: 'Hind Siliguri', sans-serif
     }
+}
+
+.board-images:hover .pen-icon{
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    margin-right:3px;
+    bottom:0;
+    right:0; 
+    border-radius: 50%;
 }

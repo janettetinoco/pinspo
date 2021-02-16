@@ -1,6 +1,7 @@
 .dropdown-open{
    position: absolute;
    display:block;
+   z-index: 4;
    right: -10px;;
    bottom: -80px;
    background-color: white;
