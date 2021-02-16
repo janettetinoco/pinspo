@@ -2,10 +2,8 @@ class Api::BoardsController < ApplicationController
     def create
           @board = Board.new(board_params)
         if @board.save
-            # debugger
             render 'api/boards/show'
         else
-            # debugger
             render json: @board.errors.full_messages, status: 422
         end
     end
@@ -29,9 +27,10 @@ class Api::BoardsController < ApplicationController
     end
 
     def update
-        @board = Board.find(params[:id])
+        # debugger
+        @board = Board.find_by(id: params[:id])
         if @board.update(board_params)
-            render json: 'api/boards/show'
+            render 'api/boards/show'
         else
             render json: @board.errors.full_messages, status: 422
         end
@@ -39,6 +38,6 @@ class Api::BoardsController < ApplicationController
 
     private
     def board_params
-        params.require(:board).permit(:title, :description, :author_id)
+        params.require(:board).permit(:id, :title, :description, :author_id)
     end
 end

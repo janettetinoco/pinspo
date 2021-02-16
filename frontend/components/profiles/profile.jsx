@@ -59,7 +59,7 @@ class Profile extends React.Component{
                     </div>
                 </div> :""}
                 <div >
-                    <Boards boards={this.props.boards} openModal={this.props.openModal}/>
+                    <Boards boards={this.props.boards} openModal={this.props.openModal} getBoard={this.props.getBoard} userId={this.props.userId} currentUser={this.props.currentUser}/>
                 </div>
             </div>
         )

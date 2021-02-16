@@ -12,7 +12,6 @@ const usersReducer = (state = {}, action) => {
             return {}; 
         case RECEIVE_PROFILE:
             let {id, username, email, age} = action.userProfile
-            // debugger
             let newState = Object.assign({}, state );
             newState[action.userProfile.id] = { id, username, email, age};
             return newState

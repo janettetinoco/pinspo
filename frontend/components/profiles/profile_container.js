@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import { getUserBoards, createBoard} from '../../actions/board_actions';
+import { getUserBoards, createBoard, getBoard} from '../../actions/board_actions';
 import Profile from './profile';
 import {openModal} from '../../actions/modal_actions';
 import{withRouter} from 'react-router-dom';
@@ -18,7 +18,8 @@ const mapDispatchToProps = () => {
     return ({
         getUserBoards: (id) => dispatch(getUserBoards(id)),
         newBoard: (board) => dispatch(createBoard(board)),
-        openModal: modal => dispatch(openModal(modal))
+        openModal: modal => dispatch(openModal(modal)),
+        getBoard: (boardId) => dispatch(getBoard(boardId))
     })
 }
 

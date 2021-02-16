@@ -48,17 +48,16 @@ export const getBoard = (boardId) => dispatch => {
 export const createBoard = (board) => dispatch => {
     return BoardAPIUtil.createBoard(board)
         .then((board) => {
-            // debugger
             dispatch(receiveBoard(board))},
             (errors) => dispatch(receiveBoardErrors(errors.responseJSON)));
 }
 
 //updates a current board
 export const updateBoard = (board) => dispatch => {
-    return BoardAPIUtil.fetchBoard(board.id)
-        .then((board) => dispatch(receiveBoard(board)),
+    // debugger
+    return BoardAPIUtil.updateBoard(board)
+        .then((board) => dispatch(receiveUserBoards(board.author_id)),
             (errors) => {
-                // debugger 
                 dispatch(receiveBoardErrors(errors.responseJSON))});
 }
 
