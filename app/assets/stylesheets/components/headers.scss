@@ -59,6 +59,12 @@
   padding: 7px;
   justify-content: center;
   align-items: center;
+  p{
+    text-transform: capitalize;
+  }
+}
+.user-icon:hover{
+  cursor: pointer;
 }
 
 .arrow-dropdown-icon{

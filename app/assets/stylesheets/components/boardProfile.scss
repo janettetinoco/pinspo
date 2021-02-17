@@ -1,17 +1,16 @@
 .board-profile{
     display: flex;
     flex-direction: column;
-    .board-profile-1{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+
     .board-profile-title{
         font-family: 'Roboto', sans-serif;
         font-size: 35px;
     }
     .user-icon{
         margin: 10px 0px;
+    }
+    .user-icon:hover{
+        cursor:default;
     }
 
     .board-profile-description{
@@ -26,6 +25,48 @@
         h2{
             font-family:'Roboto', sans-serif;
             font-size: 20px;
+        }
+    }
+    .pins-info{
+        padding:0px 20px;
+    }
+}
+
+
+.ellipsis-dropdown{
+    position: absolute;
+    display:none;
+    right:0;
+    bottom:-10px;
+}
+
+.board-profile-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .board-profile-options{
+        display:flex;
+        .board-options-button{
+            margin-left:3px;
+            position: relative;
+            .board-options-icon{
+                height: 32px;
+                width: 32px;
+            }
+            .board-options-icon:hover{
+                cursor:pointer;
+            }
+        }
+        .dropdown-open{
+            display:block;
+            z-index: 10;
+            background-color: white;
+            border-radius: 10px;
+            border: 0px;
+            width: 180px;
+            margin-left: 10px;
+            box-shadow: 0 3px 4px 0 rgba(189, 189, 189, 0.356);
+            cursor:pointer;
         }
     }
 }

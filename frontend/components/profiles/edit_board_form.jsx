@@ -4,7 +4,6 @@ import React from 'react';
 class EditBoard extends React.Component{
     constructor(props){
         super(props);
-        // debugger
         this.state = {
             id: this.props.board.id,
             title: this.props.board.title,

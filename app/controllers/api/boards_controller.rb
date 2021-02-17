@@ -9,7 +9,6 @@ class Api::BoardsController < ApplicationController
     end
 
     def show
-        # debugger
         @board = Board.find_by(id: params[:id])
         if @board
             render 'api/boards/show'

@@ -20,6 +20,10 @@
         justify-content: center;
     }
 }
+.profile-head .user-icon:hover{
+    cursor: default;
+}
+
 #username{
     font-family: 'Roboto', sans-serif;
     font-size: 35px;
@@ -82,7 +86,7 @@
    bottom: -80px;
    background-color: white;
    border-radius: 10px;
-   border: 0px;
+   border: 5px;
    width: 200px;
    margin-left: 10px;
    box-shadow: 0 3px 4px 0 rgba(189, 189, 189, 0.356);
@@ -100,6 +104,10 @@
   position: absolute;
   display:none;
 }
+
+
+
+
 
 
 .boards-grid{
@@ -181,7 +189,8 @@
             color: rgba(37, 37, 37, 0.822);
             padding:10px;
             font-size: 14px;
-            font-family: 'Hind Siliguri', sans-serif
+            font-family: 'Hind Siliguri', sans-serif;
+            cursor:pointer;
        }
        .update-button{
             border-radius: 25px;
@@ -191,7 +200,8 @@
             color: white;
             padding:10px;
             font-size: 14px;
-            font-family: 'Hind Siliguri', sans-serif
+            font-family: 'Hind Siliguri', sans-serif;
+            cursor: pointer;
        }
    }
 }
@@ -252,10 +262,14 @@
         font-family: 'Hind Siliguri', sans-serif
     }
 }
+.board-images:hover{
+    cursor: pointer;
+}
 
 .board-images:hover .pen-icon{
     display: block;
     position: absolute;
+    cursor: pointer;
     font-size: 30px;
     margin-right:3px;
     bottom:0;

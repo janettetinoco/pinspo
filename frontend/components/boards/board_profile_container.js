@@ -8,18 +8,18 @@ import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state = {}, ownProps) => {
     const boardId = parseInt(ownProps.match.params.boardId);
-    
     return ({
         boards: state.entities.boards,
         board: state.entities.boards[boardId],
-        users: state.entities.users
+        users: state.entities.users,
+        currentUser: state.session.currentUser
     })
 }
 
 const mapDispatchToProps = () => {
     return ({
         newBoard: (board) => dispatch(createBoard(board)),
-        openModal: modal => dispatch(openModal(modal)),
+        openModal: (modal, boardId) => dispatch(openModal(modal, boardId)),
         getBoard: (boardId) => dispatch(getBoard(boardId)),
         getUserBoards: (id) => dispatch(getUserBoards(id)),
     })

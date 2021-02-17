@@ -10,7 +10,6 @@ class Boards extends React.Component{
 
     handleBoardClick(id, e){
         e.preventDefault();
-        debugger
         let editButtons = document.getElementsByClassName('pen-icon')
         if(!editButtons.includes(e.target)){
             this.props.history.push(`/boards/${id}`)
