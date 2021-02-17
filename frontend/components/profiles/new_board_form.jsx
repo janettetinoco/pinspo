@@ -10,6 +10,7 @@ class NewBoardForm extends React.Component{
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
 
     update(field) {
@@ -20,6 +21,17 @@ class NewBoardForm extends React.Component{
         e.preventDefault();
         this.props.submitNewBoard(this.state).then(this.props.closeModal)
             .then(() => this.props.getUserBoards(this.props.author_id))
+    }
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`} className="session-errors">
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
     }
 
     render(){
@@ -39,7 +51,8 @@ class NewBoardForm extends React.Component{
                             <div className="board-input">
                                 <input type="text" placeholder='Like "places in the US" or "Crock Pot recipes" ' value={this.state.description} onChange={this.update('description')}></input>
                             </div>
-                        </form>   
+                        </form>  
+                        {this.renderErrors()} 
                     </div>
                 </div>
                 <div className="create-button-div">

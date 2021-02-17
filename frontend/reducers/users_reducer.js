@@ -1,6 +1,6 @@
 import { RECEIVE_CURRENT_USER } from "../actions/session_actions";
 import {LOGOUT_CURRENT_USER} from '../actions/session_actions';
-import {RECEIVE_PROFILE} from '../actions/board_actions'
+import {RECEIVE_BOARD, RECEIVE_PROFILE} from '../actions/board_actions'
 
 
 const usersReducer = (state = {}, action) => {
@@ -14,7 +14,9 @@ const usersReducer = (state = {}, action) => {
             let {id, username, email, age} = action.userProfile
             let newState = Object.assign({}, state );
             newState[action.userProfile.id] = { id, username, email, age};
-            return newState
+            return newState;
+        case RECEIVE_BOARD:
+            return Object.assign({}, state, {[action.board.author.id]: action.board.author});
         default:
             return state;
     }

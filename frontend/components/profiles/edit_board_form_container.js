@@ -4,13 +4,15 @@ import EditBoard from './edit_board_form';
 import {deleteBoard, getUserBoards, updateBoard} from '../../actions/board_actions';
 
 const mapStateToProps = (state) => {
+    // debugger
     return{
         errors: state.errors.board,
-        board: state.ui.board       
+        board: state.entities.boards[state.ui.board]   
     }
 }
 
 const mapDispatchToProps = () => {
+    // debugger
     return{
         deleteBoard: (boardId) => dispatch(deleteBoard(boardId)),
         closeModal: () => dispatch(closeModal()),

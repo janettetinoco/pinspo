@@ -18,7 +18,7 @@ const mapDispatchToProps = () => {
     return ({
         getUserBoards: (id) => dispatch(getUserBoards(id)),
         newBoard: (board) => dispatch(createBoard(board)),
-        openModal: modal => dispatch(openModal(modal)),
+        openModal: (modal,boardId) => dispatch(openModal(modal, boardId)),
         getBoard: (boardId) => dispatch(getBoard(boardId))
     })
 }

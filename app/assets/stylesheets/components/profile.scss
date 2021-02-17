@@ -119,6 +119,9 @@
         width: 230px;
         background-color: rgb(238, 232, 232);
         border-radius: 15px;
+        padding-top:10px;
+        text-align: center;
+        color:white;
     }
     .pen-icon{
         position: absolute;
@@ -144,6 +147,54 @@
     }
 
 }
+.edit-board-form-container{
+    display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   font-family: 'Fira Sans', sans-serif;
+   background: white;
+   min-height: 300px;
+   width:400px;
+   padding: 35px 10px;
+   border-radius:30px;
+
+   .modal-title{
+        font-family: 'Hind Siliguri', sans-serif;
+        margin-bottom: 30px;
+        margin-bottom: 2px;
+        font-size: 30px;
+        text-align: center;
+   }
+
+   .edit-buttons-div{
+       display: flex;
+       justify-content: space-between;
+       width: 350px;
+       margin-top: 20px;
+
+       .delete-button{
+            border-radius: 25px;
+            border-width:0px;
+            min-width:60px;
+            background-color: rgb(241, 237, 237);
+            color: rgba(37, 37, 37, 0.822);
+            padding:10px;
+            font-size: 14px;
+            font-family: 'Hind Siliguri', sans-serif
+       }
+       .update-button{
+            border-radius: 25px;
+            border-width:0px;
+            min-width:60px;
+            background-color: rgb(204, 64, 64);
+            color: white;
+            padding:10px;
+            font-size: 14px;
+            font-family: 'Hind Siliguri', sans-serif
+       }
+   }
+}
 
 .new-board-form{
     display: flex;
@@ -156,7 +207,7 @@
         flex-direction: column;
         padding: 5px 0px;
         box-sizing: border-box;
-        width: 400px;
+        width: 350px;
 
         .board-info{
             font-family: 'Roboto', sans-serif;

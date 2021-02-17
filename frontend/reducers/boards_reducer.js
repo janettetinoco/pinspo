@@ -1,4 +1,4 @@
-import {RECEIVE_PROFILE} from '../actions/board_actions'
+import {RECEIVE_BOARD, RECEIVE_PROFILE} from '../actions/board_actions'
 
 const boardsReducer = (state = {}, action)=>{
     Object.freeze(state);
@@ -9,6 +9,12 @@ const boardsReducer = (state = {}, action)=>{
                 newState[board.id] = board;
             })
             return newState;
+
+        case RECEIVE_BOARD:
+            let fixState = Object.assign({},state);
+            fixState[action.board.id] = action.board
+            return fixState;
+            
         default:
             return state;
     }

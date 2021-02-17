@@ -1,0 +1,31 @@
+.board-profile{
+    display: flex;
+    flex-direction: column;
+    .board-profile-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .board-profile-title{
+        font-family: 'Roboto', sans-serif;
+        font-size: 35px;
+    }
+    .user-icon{
+        margin: 10px 0px;
+    }
+
+    .board-profile-description{
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .pins-info{
+        height:48px;
+        display:flex;
+        align-items: center;
+        h2{
+            font-family:'Roboto', sans-serif;
+            font-size: 20px;
+        }
+    }
+}
