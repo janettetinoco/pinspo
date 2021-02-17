@@ -48,7 +48,7 @@ class Profile extends React.Component{
                 {this.props.userId === this.props.currentUser ?
                 <div id="options-bar">
                     <div className="plus-dropdown-icon" onClick={this.showMenu}>
-                        <i className="fas fa-plus" ></i>
+                        <i className="fas fa-plus" id="plus-icon"></i>
                         <div className='plus-dropdown'>
                             <h1 className="dropdown-subtitle">Create</h1>
                             <ul >
@@ -58,7 +58,7 @@ class Profile extends React.Component{
                         </div>
                     </div>
                 </div> :""}
-                <div >
+                <div className="board-grid-container">
                     <Boards boards={this.props.boards} 
                             openModal={this.props.openModal} 
                             userId={this.props.userId} 

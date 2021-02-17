@@ -52,7 +52,7 @@ class SessionForm extends React.Component{
   
 
     render(){
-        const {formType} = this.props
+        const {formType, otherForm} = this.props
         return(
             <div className="login-form-container">
                 <img src={window.logoURL} className="modal-logo"/>
@@ -81,7 +81,7 @@ class SessionForm extends React.Component{
                 {formType === 'signup' ? <button type="submit" onClick={this.demoSignIn} className="demo-button">Continue with Demo Version</button> : ""}
 
                 <div>
-                    {formType   === 'signup' ? <div className="other-form">Already have an account? {this.props.otherForm} here</div> : <div className="other-form ">Need an Account? {this.props.otherForm} here</div>}
+                    {formType   === 'signup' ? <div className="other-form">Already have an account? {otherForm} here</div> : <div className="other-form ">Need an Account? {otherForm} here</div>}
                 </div>
             </div>
         )
