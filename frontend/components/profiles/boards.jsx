@@ -4,32 +4,18 @@ import {withRouter} from 'react-router-dom';
 
 class Boards extends React.Component{
 
-    constructor(props){
-        super(props);
-    }
-
-    handleBoardClick(id, e){
-        e.preventDefault();
-        let editButtons = document.getElementsByClassName('pen-icon')
-        if(!editButtons.includes(e.target)){
-            this.props.history.push(`/boards/${id}`)
-        }else{
-            return
-        }
-    }
-
     render(){
-        const boards =this.props.boards
+        const {boards, history, openModal, currentUser, userId} = this.props
        return(
            <div  className="boards-grid">
-               {boards.map((key) => {
+               {boards.map((board) => {
                     return(
-                        <div key={`board-${key.id}`} className="board" >
+                        <div key={`board-${board.id}`} className="board" >
                             <div >
-                                <div className="board-images" onClick={(e) => {this.props.history.push(`/boards/${key.id}`)}}>
+                                <div className="board-images" onClick={(e) => {history.push(`/boards/${board.id}`)}}>
                                     Board Images
-                                    {this.props.userId === this.props.currentUser ?
-                                        <div id={`pen-icon-${key}`} className={`pen-icon`} onClick={(e) => {this.props.openModal('editBoard', key.id)
+                                    {userId === currentUser ?
+                                        <div id={`pen-icon-${board.id}`} className={`pen-icon`} onClick={(e) => {openModal('editBoard', board.id)
                                         e.stopPropagation()}}>
                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                         width="26" height="26"
@@ -39,7 +25,7 @@ class Boards extends React.Component{
                                 </div>
                                 <div>
                                     <div>
-                                        <h1 className="board-title">{key.title}</h1>
+                                        <h1 className="board-title">{board.title}</h1>
                                         <h2 className="board-info"># Pins</h2>
                                     </div>
                                 </div>
