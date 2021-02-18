@@ -12,13 +12,24 @@ class NewPinForm extends React.Component{
             board_id:"",
             imageFile: null
         }
+
+        this.handleFile = this.handleFile.bind(this);
+        this.update = this.update.bind(this);
     }
 
-    handleSubmit(){
-        let board = Object.assign({}, this.state);
-        board['author_id'] = this.props.currentUser.id;
-        this.props.createPin(board)
+    update(field) {
+        return (e) => this.setState({ [field]: e.target.value })
     }
+
+    handleFile(e){
+        this.setState({photoFile: e.currentTarget.files[0]})
+    }
+
+    // handleSubmit(){
+    //     let board = Object.assign({}, this.state);
+    //     board['author_id'] = this.props.currentUser.id;
+    //     this.props.createPin(board)
+    // }
 
     componentDidMount(){
         this.props.getUserBoards(this.props.currentUser.id)
@@ -42,14 +53,14 @@ class NewPinForm extends React.Component{
                                     <select name="this.state.board_id">
                                         {boardKeys.map((key) => <option value={`${boards[key].id}`}>{boards[key].title}</option>)}
                                     </select>
-                                <div className="save-button" onClick={this.handleSubmit()}><div>Save</div></div>
+                                <div className="save-button" ><div>Save</div></div>
                                 </div>
                         </div>
                         <div className="pin-info-section">
                             <div className="form-left">
                                 <div className="image-placeholder">
                                     <div>
-                                        Upload Images here
+                                        <input type="file" onChange={this.handleFile}/>
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +68,7 @@ class NewPinForm extends React.Component{
                                 <div>
                                     <div className="pin-details">
                                         <div className="pin-details-title">
-                                            <input type="text" placeholder="Add your title"></input>
+                                            <input type="text" placeholder="Add your title" onChange={this.update('title')}></input>
                                         </div>
                                         <div className="user-details">
                                             <div className="user-icon">
@@ -69,7 +80,7 @@ class NewPinForm extends React.Component{
                                             </div>
                                         </div>
                                         <div className="pin-details-description">
-                                            <input type="text" placeholder="Tell everyone what your Pin is about"></input>
+                                            <input type="text" placeholder="Tell everyone what your Pin is about" onChange={this.update('description')}></input>
                                         </div>
                                     </div>
                                 </div>
