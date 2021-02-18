@@ -9,6 +9,16 @@ class Profile extends React.Component{
     }
 
 
+    //function to close when clicking outisde
+
+    // window.addEventListener('click', (e) => {
+    //     const select = document.querySelector('.custom-select')
+    //     if (!select.contains(e.target)) {
+    //         select.classList.remove('open');
+    //     }
+    // });
+
+
     showMenu() {
         return (
             document.getElementsByClassName("plus-dropdown")[0].classList.toggle("dropdown-open")
@@ -35,10 +45,10 @@ class Profile extends React.Component{
             <div className="profile-component">
                 <div className="profile-head">
                     <div className="user-icon">
-                        <h1 className="user-letter">{this.props.userInfo.username[0]}</h1>
+                        <h1 className="user-letter">{user.username[0]}</h1>
                     </div>
-                    <div id="username"><h1>{this.props.userInfo.username}</h1></div>
-                    <div id="user-handle"><h3>@{this.props.userInfo.username}</h3></div>
+                    <div id="username"><h1>{user.username}</h1></div>
+                    <div id="user-handle"><h3>@{user.username}</h3></div>
                     <div className="followers-info">
                         <div> 0 followers</div>
                         <span>&middot;</span>

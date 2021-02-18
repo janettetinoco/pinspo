@@ -7,15 +7,14 @@ import LoggedInHeaderContainer from './headers/logged_in_header_container';
 import LoggedOffHeaderContainer from './headers/logged_off_header_container';
 import Profile from '../components/profiles/profile_container';
 import BoardProfile from '../components/boards/board_profile_container';
+import NewPinForm from '../components/pins/new_pin_form_container';
 
 
 const App = () => (
     <>
-        <div >
+        <header>
             <Modal />
-            <header>
-            </header>
-        </div>
+        </header>
         <AuthRoute exact path="/" component={LoggedOffHeaderContainer} />
         <ProtectedRoute path="/" component={LoggedInHeaderContainer} />
         
@@ -23,6 +22,7 @@ const App = () => (
             <Route path='/404' render={()=> <h1 id="error-page">404 Page</h1>} />
             <ProtectedRoute exact path='/users/:userId' component={Profile} />
             <ProtectedRoute exact path='/boards/:boardId' component={BoardProfile} />
+            <ProtectedRoute exact path='/pins/new' component={NewPinForm} />
             <Route exact path="/" render={() => <h1> </h1>} />
             <Route exact path="/home" render={() => <h1> </h1>} />
             <Redirect to="/404" />

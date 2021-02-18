@@ -1,0 +1,131 @@
+.new-pin-page{
+    width:100%;
+    height:100%;
+    background-color: rgb(236, 234, 234);
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+
+    .new-pin-form{
+        background-color: white;
+        width:800px;
+        height: 570px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+
+        
+
+        .pin-form-head{
+            display: flex;
+            justify-content: space-between;
+            .options-icon{
+                width:20px;
+                height: 20px;
+            }
+
+            .pin-head-right{
+                display: flex;
+                justify-content: flex-end;
+                background-color: rgb(236, 234, 234);
+                border-radius: 10px;
+                height: 40px;
+                width:236px;
+                .save-button{
+                    background-color: rgba(158, 6, 6, 0.979);
+                    color:white;
+                    width:65px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .pin-info-section{
+            display: flex;
+            flex-direction: row;
+            .form-left{
+                width:50%;
+                display: flex;
+                justify-content: flex-start;
+                .image-placeholder{
+                    width:75%;
+                    height:450px;
+                    background-color: rgb(236, 234, 234);
+                    border-radius: 10px;
+                    padding: 15px;
+                    div{
+                        border: dashed 2px rgb(223, 219, 219);
+                        width:100%;
+                        height:100%;
+                    }
+                }
+            }
+
+            .form-right{
+                width:50%;
+                .pin-details{
+                    width:90%;
+                    min-height: 400px;
+                    margin-top:25px;
+                    .pin-details-title{
+                        width:100%;
+                        border-bottom: 1px solid lightgray;
+                        input{
+                            border:none;
+                            height: 45px;
+                            font-size: 30px;
+                            font-family:'Roboto', sans-serif;
+                        }
+                    }
+                    .user-details{
+                        display: flex;
+                        margin-top:20px;
+                        align-items: center;
+    
+                        .user-info{
+                            display: flex;
+                            flex-direction: column;
+                            margin-left:5px;
+                            font-size: 14px;
+                            font-family:'Roboto', sans-serif;
+                            h2{
+                                font-size: 12px;
+                                font-weight:200;
+                                margin-top: 1px;
+                            }
+                        }
+                    }
+                    .pin-details-description{
+                        width:100%;
+                        border-bottom: 1px solid lightgray;
+                        margin-top: 20px;
+                        input{
+                            width: 100%;
+                            border:none;
+                            height: 30px;
+                            font-size: 14px;
+                            font-family:'Roboto', sans-serif;
+                            font-weight: 100;
+                            color:rgb(226, 224, 224);
+                        }
+                    }
+                }
+
+                .pin-details-link{
+                    width:100%;
+                    border-bottom: 1px solid lightgray;
+                    input{
+                        border:none;
+                        height: 30px;
+                        font-size: 15px;
+                        font-family:'Roboto', sans-serif;
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+    }
+}
