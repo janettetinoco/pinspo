@@ -1,5 +1,5 @@
 class Pin < ApplicationRecord
-    validates :title, :author_id, :board_id, presence: true
+    validates :title, :author_id, :board_id, :image, presence: true
 
     belongs_to :author,
         primary_key: :id,

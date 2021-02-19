@@ -36,8 +36,8 @@ export const requestPin = (pinId) => dispatch => {
         .then((pin) => dispatch(receiveAllPins(pin)))
 }
 
-export const createPin = (pin) => {
+export const createPin = (pin) => dispatch => {
     return PinUtil.createPin(pin)
         .then((pin) => dispatch(receivePin(pin)), 
-        (errors) => receivePinErrors(errors.responseJSON))
+        (errors) => dispatch(receivePinErrors(errors.responseJSON)));
 }

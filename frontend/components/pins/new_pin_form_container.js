@@ -18,4 +18,4 @@ const mapDispatchToProps = (dispatch) => {
     })
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewPinForm)
+export default connect(mapStateToProps, mapDispatchToProps)(NewPinForm);

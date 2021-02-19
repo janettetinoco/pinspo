@@ -22,6 +22,7 @@ class NewBoardForm extends React.Component{
         this.props.submitNewBoard(this.state).then(this.props.closeModal)
             .then(() => this.props.getUserBoards(this.props.author_id))
     }
+    
     renderErrors() {
         return (
             <ul>
