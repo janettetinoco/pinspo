@@ -44,7 +44,6 @@ class NewPinForm extends React.Component{
     }
 
     handleFile(e){
-        console.log(this.state)
         const file = e.currentTarget.files[0];
         const fileReader = new FileReader();
         fileReader.onloadend = () => {
