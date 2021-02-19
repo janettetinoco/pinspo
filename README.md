@@ -18,15 +18,14 @@ This app is a clone to the popular site Pinterest, where users can share posts a
 * CSS3
 
 ## Site
-###Demo Login Feature
+### Demo Login Feature
 This feature allows new users to navigate the app as a registered user without having to login or sign up.
 
 
-###Pins
+### Pins
 This feature contains a file that is required an image and title, and an optional description and third party link. It is the core feature of the site that provides the images for users to share and collect.
 
 
-###Boards
+### Boards
 This feature allows users to give their collections a specific category. Users are free to use and Title, Description and save an unlimited amount of pins.
 
-##
