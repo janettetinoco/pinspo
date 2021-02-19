@@ -4,7 +4,7 @@ export default (state=[], action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_PIN_ERRORS:
-            return action.errors
+            return action.errors;
         default:
             return state;
     }

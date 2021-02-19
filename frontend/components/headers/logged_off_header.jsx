@@ -16,8 +16,8 @@ class LoggedOffHeader extends React.Component{
                         <button className='grey-button' onClick={() => openModal('signup')}>Signup</button>
                     </nav>
                 </div>
-                <div>
-                    <img src={window.homePageURL} />
+                <div >
+                    <img id="home-image" src={window.homePageURL} />
                 </div>
 
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import Boards from './boards'
+import Boards from './boards';
+import {Redirect} from 'react-router-dom'
 
 class Profile extends React.Component{
     constructor(props){
@@ -63,7 +64,7 @@ class Profile extends React.Component{
                             <h1 className="dropdown-subtitle">Create</h1>
                             <ul >
                                 <li onClick={() => this.props.openModal('newBoard')} className="menu-option">Board</li>
-                                <li className="menu-option">Pin</li>
+                                <li onClick={() => this.props.history.push('/pins/new')}className="menu-option">Pin</li>
                             </ul>
                         </div>
                     </div>

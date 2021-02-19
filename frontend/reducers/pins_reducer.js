@@ -2,9 +2,13 @@ import {RECEIVE_ALL_PINS, RECEIVE_PIN} from '../actions/pin_actions';
 
 const pinReducer = (state= {}, action) => {
     Object.freeze(state);
-    switch (key) {
+    switch (action.type) {
         case RECEIVE_ALL_PINS:
-            return action.pins
+            let newState = {};
+            action.pins.forEach((pin) => {
+                newState[pin.id] = pin;
+            })
+            return newState;
         default:
             return state;
     }

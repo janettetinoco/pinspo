@@ -2,6 +2,9 @@ class Api::PinsController < ApplicationController
     #come back and do destroy and update
 
     def create
+        if pin_params[:image] == "null"
+            return render json: ["You need to provide an image"], status: 401
+        end
         @pin = Pin.new(pin_params)
         if @pin.save
             render 'api/pins/show'
