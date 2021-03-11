@@ -24,6 +24,7 @@ This app is a clone to the popular site Pinterest, where users can share posts a
 ## Site
 ### Demo Login Feature
 This feature allows new users to navigate the app as a registered user without having to login or sign up.
+
 ![demo-gif](https://github.com/janettetinoco/pinspo/blob/main/app/assets/images/demo.gif)
 
 
@@ -34,4 +35,3 @@ This feature contains a file that is required an image and title, and an optiona
 ### Boards
 This feature allows users to give their collections a specific category. Users are free to use and Title, Description and save an unlimited amount of pins.
 
->>>>>>> f15847b0d1ffccb54fa19f25b4555ac4377341fe
