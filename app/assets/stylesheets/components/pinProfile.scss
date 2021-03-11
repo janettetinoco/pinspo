@@ -1,0 +1,16 @@
+#pin-profile-container{
+    width:800px;
+    height: 570px;
+    box-shadow: 1 2px black;
+
+    #left{
+        width:50%;
+        img{
+            width:100%;
+            height:auto;
+        }
+    }
+    #right{
+        width:50%;
+    }
+}

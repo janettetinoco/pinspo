@@ -3,6 +3,7 @@ import * as PinUtil from '../util/pin_api_util';
 export const RECEIVE_ALL_PINS = 'RECEIVE_ALL_PINS';
 export const RECEIVE_PIN = 'RECEIVE_PIN';
 export const RECEIVE_PIN_ERRORS = 'RECEIVE_PIN_ERRORS';
+export const CLEAR_PIN_ERRORS = 'CLEAR_PIN_ERRORS';
 
 
 export const receiveAllPins = (pins) => {
@@ -23,6 +24,12 @@ export const receivePinErrors = (errors) => {
     return ({
         type: RECEIVE_PIN_ERRORS,
         errors
+    })
+}
+
+export const clearPinErrors = () => {
+    return ({
+        type: CLEAR_PIN_ERRORS
     })
 }
 

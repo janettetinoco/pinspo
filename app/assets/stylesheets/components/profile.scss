@@ -119,6 +119,7 @@
     grid-template-columns: repeat( 5, minmax(265px, 1fr) );
     grid-auto-rows: 225px;
     margin: 0;
+    
 
     .board{
         padding:4px;
@@ -129,7 +130,6 @@
         width: 230px;
         background-color: rgb(238, 232, 232);
         border-radius: 15px;
-        padding-top:10px;
         text-align: center;
         color:white;
     }
@@ -282,4 +282,35 @@
 .board-grid-container{
     display: flex;
     justify-content: center;
+}
+
+#boardPics-container{
+    display: grid;
+    width:100%;
+    height:100%;
+    grid-template-columns: 2fr 1fr;
+    opacity: 80%;
+    
+    img{
+        justify-self: stretch;
+        max-height: 100%;
+        width:auto;
+        overflow:hidden;
+    }
+    #img1{
+        grid-row: 1 / span 2;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-right:1px solid white;
+    }
+    #img2{
+        justify-self: stretch;
+        border-bottom: 3px solid white;
+        border-top-right-radius: 15px;
+    }
+    #img3{
+         border-bottom-right-radius: 15px;
+         border-top: 1px solid white;
+    }
+    
 }

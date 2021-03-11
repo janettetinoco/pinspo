@@ -5,15 +5,30 @@ import {withRouter} from 'react-router-dom';
 class Boards extends React.Component{
 
     render(){
-        const {boards, history, openModal, currentUser, userId} = this.props
+        const {boards, history, openModal, currentUser, userId, pins} = this.props
+        const boardPics ={};
+        Object.keys(pins).map((id) => {
+            if(boards[pins[id].board_id]){
+                if (!boardPics[pins[id].board_id]){
+                    boardPics[pins[id].board_id] = [pins[id].photoURL]
+                }else{
+                    boardPics[pins[id].board_id].push(pins[id].photoURL)
+                }
+            }
+        })
        return(
            <div  className="boards-grid">
-               {boards.map((board) => {
+               {Object.values(boards).map((board) => {
                     return(
                         <div key={`board-${board.id}`} className="board" >
                             <div >
                                 <div className="board-images" onClick={(e) => {history.push(`/boards/${board.id}`)}}>
-                                    Board Images
+                                    {boardPics[board.id] ? <div id="boardPics-container">
+                                        {boardPics[board.id][0] ? <img id="img1" src={boardPics[board.id][0]}/> : <div></div>}
+                                        {boardPics[board.id][1] ? <img id="img2" src={boardPics[board.id][1]} /> : <div></div>}
+                                        {boardPics[board.id][2] ? <img id="img3" src={boardPics[board.id][2]} /> : <div id="img3"></div>}
+                                    </div> : ""}
+                                    
                                     {userId === currentUser ?
                                         <div id={`pen-icon-${board.id}`} className={`pen-icon`} onClick={(e) => {openModal('editBoard', board.id)
                                         e.stopPropagation()}}>
@@ -26,7 +41,7 @@ class Boards extends React.Component{
                                 <div>
                                     <div>
                                         <h1 className="board-title">{board.title}</h1>
-                                        <h2 className="board-info"># Pins</h2>
+                                        <h2 className="board-info">{boardPics[board.id] ? boardPics[board.id].length: '0'} Pins</h2>
                                     </div>
                                 </div>
                             </div>

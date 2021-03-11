@@ -16,4 +16,36 @@ footer{
         padding: 3px;
         z-index: 100;
     }
+    #question-icon{
+        position: relative;
+    }
+
+    #about-me-links{
+        display:none;
+    }
+
+    #about-me-links.open{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        width: 20vw;
+        background-color: #b6b4b42e;
+        padding: 5px 10px;
+        right: 47px;
+        box-shadow: lightgrey;
+        border-radius: 20px;
+        font-family: 'Fira Sans', sans-serif;
+
+        img{
+            height: 25px;
+            width:25px;
+        }
+        div{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+
 }

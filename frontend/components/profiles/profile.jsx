@@ -28,6 +28,7 @@ class Profile extends React.Component{
 
     componentDidMount(){
         this.props.getUserBoards(this.props.userId);
+        this.props.requestAllPins();
     }
 
     componentDidUpdate(prevProps) {
@@ -38,10 +39,11 @@ class Profile extends React.Component{
     }
 
     render(){
-        if ( this.props.userInfo === undefined){
+        if ( this.props.userInfo === undefined || Object.keys(this.props.pins).length === 0){
             return null
         }
         const user = this.props.userInfo;
+        
         return(
             <div className="profile-component">
                 <div className="profile-head">
@@ -73,7 +75,8 @@ class Profile extends React.Component{
                     <Boards boards={this.props.boards} 
                             openModal={this.props.openModal} 
                             userId={this.props.userId} 
-                            currentUser={this.props.currentUser}/>
+                            currentUser={this.props.currentUser}
+                            pins={this.props.pins}/>
                 </div>
 
             </div>

@@ -55,7 +55,7 @@ class NewPinForm extends React.Component{
     }
 
     resetForm(){
-        this.setState({
+        return(()=>this.setState({
             title: "",
             description: "",
             link: "",
@@ -63,7 +63,7 @@ class NewPinForm extends React.Component{
             board_id: "",
             imageFile: null,
             imageUrl: null
-        })
+        }).then(this.props.clearPinErrors()))
     }
 
     handleSubmit(e){
@@ -93,6 +93,7 @@ class NewPinForm extends React.Component{
 
     componentDidMount(){
         this.props.getUserBoards(this.props.currentUser.id)
+        this.props.clearPinErrors();
     }
 
     render(){

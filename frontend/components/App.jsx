@@ -10,6 +10,7 @@ import BoardProfile from '../components/boards/board_profile_container';
 import NewPinForm from '../components/pins/new_pin_form_container';
 import Footer from './footer/footer';
 import HomeFeed from '../components/pins/home_feed_container';
+import PinProfile from './pins/pin_profile_container';
 
 
 const App = () => (
@@ -25,6 +26,7 @@ const App = () => (
             <ProtectedRoute exact path='/users/:userId' component={Profile} />
             <ProtectedRoute exact path='/boards/:boardId' component={BoardProfile} />
             <ProtectedRoute exact path='/pins/new' component={NewPinForm} />
+            <ProtectedRoute exact path='/pins/:pinId' component={PinProfile} />
             <Route exact path="/" render={() => <h1> </h1>} />
             <ProtectedRoute exact path="/home" component={HomeFeed} />
             <Redirect to="/404" />

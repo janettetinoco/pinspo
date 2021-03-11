@@ -1,4 +1,5 @@
 import React from 'react';
+import Pins from '../pins/pins'
 
 class BoardProfile extends React.Component{
 
@@ -11,6 +12,7 @@ class BoardProfile extends React.Component{
 
     componentDidMount(){
         this.props.getBoard(this.props.match.params.boardId);
+        this.props.requestAllPins();
     }
     
     componentDidUpdate(prevProps) {
@@ -20,12 +22,12 @@ class BoardProfile extends React.Component{
     }
 
     render(){
-        if(!this.props.board){
+        if(!this.props.board || Object.keys(this.props.pins).length === 0){
             return null;
         }else{
             this.userInfo = this.props.users[this.props.board.author_id];
         }
-        const {board, currentUser} = this.props
+        const {board, currentUser} = this.props;
         return(
             <div className="board-profile">
                 <div>
@@ -57,17 +59,16 @@ class BoardProfile extends React.Component{
                     </div>
                 </div>
                 <div className="pins-info">
-                    <h2># Pins</h2>
+                    <h2>{Object.keys(this.props.pins).length} Pins</h2>
                 </div>
                 <div>
-                    Pins Component Here
+                    <Pins pins={this.props.pins} boardId={this.props.boardId} />
                 </div>
 
 
 
             </div>
         )
-        return null;
     }
 }
 

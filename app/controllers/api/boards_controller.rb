@@ -10,6 +10,7 @@ class Api::BoardsController < ApplicationController
 
     def show
         @board = Board.find_by(id: params[:id])
+        @board_pins = BoardPin.where(board_id: params[:id])
         if @board
             render 'api/boards/show'
         else

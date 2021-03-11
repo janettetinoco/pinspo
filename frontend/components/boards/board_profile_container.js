@@ -3,12 +3,15 @@ import BoardProfile from './board_profile';
 import {openModal} from '../../actions/modal_actions';
 import {getBoard} from '../../actions/board_actions'
 import {withRouter} from 'react-router-dom';
+import { requestAllPins } from '../../actions/pin_actions';
 
 
 
 const mapStateToProps = (state = {}, ownProps) => {
     const boardId = parseInt(ownProps.match.params.boardId);
     return ({
+        boardId,
+        pins: state.entities.pins,
         boards: state.entities.boards,
         board: state.entities.boards[boardId],
         users: state.entities.users,
@@ -22,6 +25,7 @@ const mapDispatchToProps = () => {
         openModal: (modal, boardId) => dispatch(openModal(modal, boardId)),
         getBoard: (boardId) => dispatch(getBoard(boardId)),
         getUserBoards: (id) => dispatch(getUserBoards(id)),
+        requestAllPins: () => dispatch(requestAllPins())
     })
 }
 
