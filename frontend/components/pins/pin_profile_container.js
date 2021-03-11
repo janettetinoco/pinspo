@@ -3,7 +3,6 @@ import PinProfile from './pin_profile';
 
 const mapStateToProps = (state={}, ownProps) => {
     const pinId = parseInt(ownProps.match.params.pinId)
-    debugger
     return({
         pin: state.entities.pins[pinId],
         pins: state.entities.pins,

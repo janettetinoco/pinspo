@@ -8,7 +8,6 @@ export const REMOVE_BOARD = "REMOVE_BOARD";
 export const RECEIVE_BOARD_ERRORS = 'RECEIVE_BOARD_ERRORS'
 
 export const receiveBoard = (board) => {
-    debugger
     return {
         type: RECEIVE_BOARD,
         board
