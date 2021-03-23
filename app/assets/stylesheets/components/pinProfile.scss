@@ -1,16 +1,125 @@
+#pin-profile-page{
+    display:flex;
+    justify-content: center;
+    position: relative;
+    .back-arrow{
+        position: absolute;
+        left:22px;
+        top:10px;
+        height:30px;
+        width:30px;
+    }
+    .back-arrow:hover{
+        border-radius: 50%;
+        background-color: rgb(229, 224, 224);
+        cursor: pointer;
+    }
+}
 #pin-profile-container{
-    width:800px;
-    height: 570px;
-    box-shadow: 1 2px black;
+    width:1000px;
+    min-height: 300px;
+    box-shadow: 0 0 14px 3px #e6e6e6;
+    padding: 20px;
+    border-radius: 20px;
+    display:flex;
 
     #left{
         width:50%;
+        height:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         img{
             width:100%;
             height:auto;
+            border-radius: 15px;
         }
     }
     #right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         width:50%;
+        padding:  0px 0px 0px 20px;
+        .pin-head-right{
+            width:100%;
+            background-color: transparent;
+            .save-button{
+                width: 80px;
+            }
+        }
+        .board-options{
+            width: 236px;
+            display: flex;
+            justify-content: flex-end;
+            border-radius: 10px;
+            background-color: rgb(236, 234, 234);
+            border-radius: 10px;
+        }
+        .board-text{
+            position: relative;
+            .menu-option{
+                color:black;
+            }
+        }
+        #body-right{
+            font-family:'Roboto', sans-serif; 
+            padding: 0px 20px;
+            min-height:100px;
+            #pin-profile-title{
+                margin: 15px 0px;
+                font-size: 32px;
+            }
+            
+        }
+        .pin-author-details{
+                display:flex;
+                font-weight: 200;
+                justify-content: space-between;
+                font-family:'Roboto', sans-serif; 
+                h1{
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+                h2{
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+                #author-info{
+                    display:flex;
+                }
+                .pin-author-icon{
+                    display: flex;
+                    box-sizing: border-box;
+                    width: 40px;
+                    height: 40px;
+                    background-color: rgba(163, 154, 154, 0.952);
+                    text-decoration: none;
+                    border-radius: 50%;
+                    border-width: 0;
+                    color: white;
+                    padding: 7px;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 7px;
+                }
+                .pin-follow-user{
+                    display: flex;
+                    width: 85px;
+                    border-radius: 20px;
+                    background-color: rgb(236, 234, 234);
+                    font-weight: 400;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
     }
+}
+
+#pin-profile-link{
+    margin:5px 0px;
+    width:100px;
+    height: 20px;
+    text-overflow: ellipsis;
 }

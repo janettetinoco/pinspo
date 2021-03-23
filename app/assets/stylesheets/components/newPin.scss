@@ -31,51 +31,6 @@
                 padding:2px;
             }
 
-            .pin-head-right{
-                display: flex;
-                justify-content: flex-end;
-                background-color: rgb(236, 234, 234);
-                border-radius: 10px;
-                height: 40px;
-                width:236px;
-                position:relative;
-                font-family: 'Roboto', sans-serif;
-
-                .board-text{
-                    display: flex;
-                    width:100%;
-                    justify-content: space-around;
-                    align-items: center;
-                    text-align: center;
-                    color: rgb(182, 180, 180);
-                }
-
-                .save-button{
-                    background-color: rgba(197, 42, 42, 0.979);
-                    color:white;
-                    width:75px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 0px 10px 10px 0px;
-                }
-
-                .boards-dropdown{
-                    display:none
-                }
-                .dropdown-open{
-                    position: absolute;
-                    display: block;
-                    left: -240px;
-                    top:0;
-                    width:225px;
-                    max-height: 350px;
-                    overflow-x:hidden;
-                    overflow-y:auto;
-                    // transform: translate(-10px, 50px);
-
-                }
-            }
         }
 
         .pin-info-section{
@@ -175,5 +130,57 @@
                 }
             }
         }
+    }
+}
+
+
+input#upload {
+    cursor: pointer;
+}
+
+
+.pin-head-right{
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(236, 234, 234);
+    border-radius: 10px;
+    height: 40px;
+    width:236px;
+    position:relative;
+    font-family: 'Roboto', sans-serif;
+
+    .board-text{
+        display: flex;
+        width:100%;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        color: rgb(182, 180, 180);
+    }
+
+    .save-button{
+        background-color: rgba(197, 42, 42, 0.979);
+        color:white;
+        width:75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .boards-dropdown{
+        display:none
+    }
+    .dropdown-open{
+        position: absolute;
+        display: block;
+        left: -240px;
+        top:0;
+        width:225px;
+        max-height: 350px;
+        overflow-x:hidden;
+        overflow-y:auto;
+        // transform: translate(-10px, 50px);
+
     }
 }

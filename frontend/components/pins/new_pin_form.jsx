@@ -156,7 +156,7 @@ class NewPinForm extends React.Component{
                                     </div>
                                 </div>
                                 <div className="pin-details-link">
-                                    <input type="text" placeholder="Add a destination link" />
+                                    <input type="text" placeholder="Add a destination link" onChange={this.update('link')}/>
                                 </div>
                             </div>
 

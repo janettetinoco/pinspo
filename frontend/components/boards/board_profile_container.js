@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import BoardProfile from './board_profile';
 import {openModal} from '../../actions/modal_actions';
-import {getBoard} from '../../actions/board_actions'
+import {getBoard,  getUserBoards} from '../../actions/board_actions'
 import {withRouter} from 'react-router-dom';
 import { requestAllPins } from '../../actions/pin_actions';
 

@@ -40,7 +40,7 @@ export const requestAllPins = () => dispatch => {
 
 export const requestPin = (pinId) => dispatch => {
     return PinUtil.fetchPin(pinId)
-        .then((pin) => dispatch(receiveAllPins(pin)))
+        .then((pin) => dispatch(receiveAllPins([pin])))
 }
 
 export const createPin = (pin) => dispatch => {

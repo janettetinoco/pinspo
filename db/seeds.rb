@@ -48,6 +48,8 @@ image16 = open('https://pinspo-dev.s3-us-west-1.amazonaws.com/plant_wall.jpg')
 image17= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/travel_idea.jpg')
 image18= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/travel_pack.jpg')
 image19= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/wedding.jpg')
+image20= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/pinterest-bathroom-designs-1.jpg')
+
 
 
 pin1 = Pin.create(title: "rainbow organization", author_id: user5.id, board_id: board12.id)

@@ -2,7 +2,17 @@ import React from 'react';
 import Pins from '../pins/pins'
 
 class BoardProfile extends React.Component{
+    constructor(props){
+        super(props);
 
+        // let pins = {};
+        // // Object.keys(this.props.pins).forEach((key) => {
+        //     //     pins[key] = { id: this.props.pins[key].id, title: this.props.pins[key].title }
+        //     // })
+            
+        //     debugger
+        //     localStorage.setItem('pins', JSON.stringify(this.props.pins));
+    }
 
     showMenu() {
         return (
