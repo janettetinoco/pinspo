@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 
 class PinProfile extends React.Component{
@@ -7,7 +7,6 @@ class PinProfile extends React.Component{
         this.state ={
             board_id:"",
         }
-        // debugger
        
 
         this.showMenu = this.showMenu.bind(this);
@@ -68,7 +67,7 @@ class PinProfile extends React.Component{
                             </div>
                         </div>
                         <div className="pin-author-details">
-                            <div id="author-info">
+                            <div id="author-info" onClick={() => this.props.history.push(`/users/${author.id}`)}>
                                 <div className="pin-author-icon">
                                     <h1>{author.username[0]}</h1>
                                 </div>

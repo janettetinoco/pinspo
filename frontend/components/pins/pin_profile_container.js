@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import {withRouter} from 'react-router-dom';
 import PinProfile from './pin_profile';
 import {requestPin} from '../../actions/pin_actions';
 import { getUserBoards } from '../../actions/board_actions';
@@ -21,4 +22,4 @@ const mapDispatchToProps = (dispatch) => {
     })
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(PinProfile);
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(PinProfile));
