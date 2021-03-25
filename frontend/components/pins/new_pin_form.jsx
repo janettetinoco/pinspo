@@ -55,7 +55,7 @@ class NewPinForm extends React.Component{
     }
 
     resetForm(){
-        return(()=>this.setState({
+        this.setState({
             title: "",
             description: "",
             link: "",
@@ -63,7 +63,8 @@ class NewPinForm extends React.Component{
             board_id: "",
             imageFile: null,
             imageUrl: null
-        }).then(this.props.clearPinErrors()))
+        })
+        this.props.clearPinErrors()
     }
 
     handleSubmit(e){
@@ -138,7 +139,7 @@ class NewPinForm extends React.Component{
                                 <div>
                                     <div className="pin-details">
                                         <div className="pin-details-title">
-                                            <input type="text" placeholder="Add your title" onChange={this.update('title')}></input>
+                                            <input type="text" placeholder="Add your title" onChange={this.update('title')} value={this.state.title}></input>
                                         </div>
                                         <div className="user-details">
                                             <div className="user-icon">
@@ -150,7 +151,7 @@ class NewPinForm extends React.Component{
                                             </div>
                                         </div>
                                         <div className="pin-details-description">
-                                            <input type="text" placeholder="Tell everyone what your Pin is about" onChange={this.update('description')}></input>
+                                            <input type="text" placeholder="Tell everyone what your Pin is about" onChange={this.update('description')} value={this.state.description}></input>
                                         </div>
                                         {this.renderErrors()} 
                                     </div>

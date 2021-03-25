@@ -6,8 +6,11 @@ class Api::PinsController < ApplicationController
             return render json: ["You need to provide an image"], status: 401
         end
         @pin = Pin.new(pin_params)
+
+
         if @pin.save
-            # BoardPin.create(pin_id: @pin.id, board_id: @pin.board_id)
+            debugger
+            BoardPin.create(pin_id: @pin.id, board_id: @pin.board_id)
             render 'api/pins/show'
         else
             render json: @pin.errors.full_messages, status: 422
