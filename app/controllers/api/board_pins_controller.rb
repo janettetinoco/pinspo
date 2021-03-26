@@ -3,6 +3,7 @@ class Api::BoardPinsController < ApplicationController
         @board_pin = BoardPin.new(board_pin_params)
         if @board_pin.save
             render 'api/board_pins/show'
+            #send nothing back yet
         else
             render json: @board_pin.errors.full_messages, status: 422
         end
@@ -19,6 +20,6 @@ class Api::BoardPinsController < ApplicationController
 
     private
     def board_pin_params
-        params.require(:board_pin).permit(:author_id, :board_id)
+        params.require(:board_pin).permit(:pin_id, :board_id)
     end
 end

@@ -3,6 +3,7 @@ import {withRouter} from 'react-router-dom';
 import PinProfile from './pin_profile';
 import {requestPin} from '../../actions/pin_actions';
 import { getUserBoards } from '../../actions/board_actions';
+import {createPinToBoard} from '../../actions/board_pin_actions';
 
 const mapStateToProps = (state={}, ownProps) => {
     const pinId = parseInt(ownProps.match.params.pinId);
@@ -18,7 +19,8 @@ const mapStateToProps = (state={}, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return ({
         requestPin: (pinId) => dispatch(requestPin(pinId)),
-        getUserBoards:(userId) => dispatch(getUserBoards(userId))
+        getUserBoards:(userId) => dispatch(getUserBoards(userId)),
+        createPinToBoard:(boardPin) => dispatch(createPinToBoard(boardPin))
     })
 }
 

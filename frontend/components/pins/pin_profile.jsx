@@ -6,10 +6,22 @@ class PinProfile extends React.Component{
         super(props);
         this.state ={
             board_id:"",
+            pin_id: ""
         }
        
 
         this.showMenu = this.showMenu.bind(this);
+        this.updateBoard = this.updateBoard.bind(this)
+        this.attachPin = this.attachPin.bind(this);
+    }
+
+    attachPin(){
+        debugger
+        this.props.createPinToBoard(this.state).then(()=>{
+            document.getElementsByClassName('board-options')[0].classList.add('hidden')
+            document.getElementsByClassName('save-button')[0].classList.add('hidden')
+            document.getElementsByClassName('board-text')[0].classList.add('hidden')
+        });
     }
    
 
@@ -24,6 +36,15 @@ class PinProfile extends React.Component{
         if (!this.props.pin){
             this.props.requestPin(this.props.pinId)
             this.props.getUserBoards(this.props.currentUser)
+        }
+    }
+    updateBoard(){
+        return (e) => {
+            this.setState({ board_id: e.target.value, pin_id: this.props.pin.id });
+            document.getElementsByClassName("boards-dropdown.dropdown-open")[0].classList.remove("dropdown-open")
+            // document.getElementsByClassName("boards-dropdown")[0].classList.remove('dropdown-open')
+            // document.getElementsByClassName("boards-dropdown")[0].classList.toggle("dropdown-open")
+
         }
     }
 
@@ -53,10 +74,10 @@ class PinProfile extends React.Component{
                                     <div className="board-text" onClick={this.showMenu}><span>{this.state.board_id === "" ? "Select Board" : `${boards[this.state.board_id].title}`}</span><i className="fas fa-chevron-down" ></i>
                                             <ul className="boards-dropdown">
                                                 <h1 className="dropdown-subtitle">All boards</h1>
-                                                {Object.values(boards).map((board,key) => <li key={key} className=" menu-option" value={`${board.id}`}>{board.title}</li>)}
+                                                {Object.values(boards).map((board, key) => <li key={key} className=" menu-option" value={`${board.id}`} onClick={this.updateBoard()}>{board.title}</li>)}
                                             </ul>
                                         </div>
-                                        <div className="save-button"><div>Save</div>
+                                        <div className="save-button" onClick={this.attachPin}><div>Save</div>
                                     </div>
                                 </div>
                             </div>
