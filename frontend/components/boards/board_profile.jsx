@@ -4,14 +4,6 @@ import Pins from '../pins/pins'
 class BoardProfile extends React.Component{
     constructor(props){
         super(props);
-
-        // let pins = {};
-        // // Object.keys(this.props.pins).forEach((key) => {
-        //     //     pins[key] = { id: this.props.pins[key].id, title: this.props.pins[key].title }
-        //     // })
-            
-        //     debugger
-        //     localStorage.setItem('pins', JSON.stringify(this.props.pins));
     }
 
     showMenu() {
@@ -69,10 +61,10 @@ class BoardProfile extends React.Component{
                     </div>
                 </div>
                 <div className="pins-info">
-                    <h2>{Object.keys(this.props.pins).length} Pins</h2>
+                   
                 </div>
                 <div>
-                    <Pins pins={this.props.pins} boardId={this.props.boardId} />
+                    <Pins pins={this.props.pins} boardId={this.props.boardId} boardPins={board.pins}/>
                 </div>
 
 

@@ -28,8 +28,8 @@ class LoggedInHeader extends React.Component{
                     <Link to='/home' className='home-button'>Home</Link>
                 </div>
                 <div className='right-nav'>
-                    <div className="user-icon">
-                        <p onClick={() => this.props.history.push(`/users/${this.props.currentUser}`)}>{this.props.username[0]}</p>
+                    <div className="user-icon" onClick={() => this.props.history.push(`/users/${this.props.currentUser}`)}>
+                        <p >{this.props.username[0]}</p>
                         {/* <Link to={`/users/${this.props.currentUser}`} className='user-letter'>{this.props.username[0]}</Link> */}
                     </div>
                     <div className='arrow-dropdown-icon' onClick={this.showMenu}>

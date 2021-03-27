@@ -48,6 +48,9 @@
             .save-button{
                 width: 80px;
             }
+            .save-button:hover{
+                cursor: pointer;
+            }
         }
         .board-options{
             width: 236px;
@@ -154,4 +157,11 @@
 
 .saved-to.hidden{
     display: none;
+}
+
+.menu-option:hover{
+    cursor:pointer;
+}
+.board-text:hover{
+    cursor:pointer;
 }

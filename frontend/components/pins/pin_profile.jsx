@@ -20,7 +20,6 @@ class PinProfile extends React.Component{
         this.props.createPinToBoard(this.state).then(()=>{
             document.getElementsByClassName('save-button')[0].classList.add('hidden');
             document.getElementsByClassName('board-text')[0].classList.add('hidden');
-            debugger
             let saved = document.getElementsByClassName("saved-to")[0];
             // document.getElementsByClassName('saved-to')[0].classList.remove('hidden');
             saved.innerHTML = `saved to ${this.props.boards[this.state.board_id].title}`;

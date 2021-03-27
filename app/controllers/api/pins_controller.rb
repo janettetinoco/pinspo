@@ -9,7 +9,6 @@ class Api::PinsController < ApplicationController
 
 
         if @pin.save
-            debugger
             BoardPin.create(pin_id: @pin.id, board_id: @pin.board_id)
             render 'api/pins/show'
         else
