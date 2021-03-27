@@ -147,6 +147,10 @@
     font-size: 14px;
     font-weight: 300;
 }
+.saved-to:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 .saved-to.hidden{
     display: none;

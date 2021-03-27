@@ -13,6 +13,7 @@ class PinProfile extends React.Component{
         this.showMenu = this.showMenu.bind(this);
         this.updateBoard = this.updateBoard.bind(this)
         this.attachPin = this.attachPin.bind(this);
+        this.redirectTo = this.redirectTo.bind(this)
     }
 
     attachPin(){
@@ -24,7 +25,12 @@ class PinProfile extends React.Component{
             // document.getElementsByClassName('saved-to')[0].classList.remove('hidden');
             saved.innerHTML = `saved to ${this.props.boards[this.state.board_id].title}`;
             saved.style.width = '100%';
+            // saved.onClick = this.redirectTo();
         });
+    }
+
+    redirectTo(){
+        this.props.history.push(`/boards/${this.state.board_id}`)
     }
    
 
@@ -71,7 +77,7 @@ class PinProfile extends React.Component{
                         <div>
                             <div className="pin-head-right">
                                 <div className="board-options">
-                                    <div className="saved-to" ></div>
+                                    <div className="saved-to" onClick={this.redirectTo} ></div>
                                     <div className="board-text" onClick={this.showMenu}><span>{this.state.board_id === "" ? "Select Board" : `${boards[this.state.board_id].title}`}</span><i className="fas fa-chevron-down" ></i>
                                             <ul className="boards-dropdown">
                                                 <h1 className="dropdown-subtitle">All boards</h1>
