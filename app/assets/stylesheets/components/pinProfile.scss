@@ -1,6 +1,4 @@
-.hidden{
-    display:none;
-}
+
 #pin-profile-page{
     display:flex;
     justify-content: center;
@@ -126,4 +124,30 @@
     width:100px;
     height: 20px;
     text-overflow: ellipsis;
+}
+
+#pin-profile-container #right .board-options.hidden{
+    display:none;
+}
+#pin-profile-container #right .pin-head-right .save-button.hidden{
+    display: none;
+}
+#pin-profile-container #right .board-text.hidden{
+    display:none;
+}
+
+.hidden{
+    display: none;
+}
+
+.saved-to{
+    justify-self: center;
+    align-self: center;
+    text-align:center;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.saved-to.hidden{
+    display: none;
 }

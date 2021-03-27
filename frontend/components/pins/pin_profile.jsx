@@ -16,11 +16,14 @@ class PinProfile extends React.Component{
     }
 
     attachPin(){
-        debugger
         this.props.createPinToBoard(this.state).then(()=>{
-            document.getElementsByClassName('board-options')[0].classList.add('hidden')
-            document.getElementsByClassName('save-button')[0].classList.add('hidden')
-            document.getElementsByClassName('board-text')[0].classList.add('hidden')
+            document.getElementsByClassName('save-button')[0].classList.add('hidden');
+            document.getElementsByClassName('board-text')[0].classList.add('hidden');
+            debugger
+            let saved = document.getElementsByClassName("saved-to")[0];
+            // document.getElementsByClassName('saved-to')[0].classList.remove('hidden');
+            saved.innerHTML = `saved to ${this.props.boards[this.state.board_id].title}`;
+            saved.style.width = '100%';
         });
     }
    
@@ -41,9 +44,7 @@ class PinProfile extends React.Component{
     updateBoard(){
         return (e) => {
             this.setState({ board_id: e.target.value, pin_id: this.props.pin.id });
-            document.getElementsByClassName("boards-dropdown.dropdown-open")[0].classList.remove("dropdown-open")
-            // document.getElementsByClassName("boards-dropdown")[0].classList.remove('dropdown-open')
-            // document.getElementsByClassName("boards-dropdown")[0].classList.toggle("dropdown-open")
+            document.getElementsByClassName("boards-dropdown.dropdown-open")[0].classList.remove("dropdown-open");
 
         }
     }
@@ -70,7 +71,7 @@ class PinProfile extends React.Component{
                         <div>
                             <div className="pin-head-right">
                                 <div className="board-options">
-
+                                    <div className="saved-to" ></div>
                                     <div className="board-text" onClick={this.showMenu}><span>{this.state.board_id === "" ? "Select Board" : `${boards[this.state.board_id].title}`}</span><i className="fas fa-chevron-down" ></i>
                                             <ul className="boards-dropdown">
                                                 <h1 className="dropdown-subtitle">All boards</h1>
