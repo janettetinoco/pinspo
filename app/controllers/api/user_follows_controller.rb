@@ -1,6 +1,6 @@
 class Api::UserFollowsController < ApplicationController
      def create
-        @user_follow = UserFollow.new(board_pin_params)
+        @user_follow = UserFollow.new(user_follow_params)
         if @user_follow.save
             render 'api/board_pins/show'
             #send nothing back yet
