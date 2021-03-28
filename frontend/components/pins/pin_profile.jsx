@@ -67,7 +67,7 @@ class PinProfile extends React.Component{
         }
         return(
             <div id="pin-profile-page">
-                <Link to='/home'><img className="back-arrow" src="https://img.icons8.com/ios-filled/50/000000/left.png" /></Link>
+                <div onClick={this.props.history.goBack}><img className="back-arrow" src="https://img.icons8.com/ios-filled/50/000000/left.png" /></div>
                 <div id="pin-profile-container">
                     <div id="left">
                         <img src={pin.photoURL} />

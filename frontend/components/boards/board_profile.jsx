@@ -60,9 +60,7 @@ class BoardProfile extends React.Component{
                         </div>
                     </div>
                 </div>
-                <div className="pins-info">
-                   
-                </div>
+                
                 <div>
                     <Pins pins={this.props.pins} boardId={this.props.boardId} boardPins={board.pins}/>
                 </div>
