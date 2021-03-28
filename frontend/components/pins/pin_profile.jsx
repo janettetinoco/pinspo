@@ -65,6 +65,7 @@ class PinProfile extends React.Component{
             const pinLinkEnd = pin.link.slice(pinLinkStart).indexOf('/');
             pinLink = pin.link.slice(pinLinkStart, pinLinkStart + pinLinkEnd)
         }
+
         return(
             <div id="pin-profile-page">
                 <div onClick={this.props.history.goBack}><img className="back-arrow" src="https://img.icons8.com/ios-filled/50/000000/left.png" /></div>
