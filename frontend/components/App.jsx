@@ -11,7 +11,7 @@ import NewPinForm from '../components/pins/new_pin_form_container';
 import Footer from './footer/footer';
 import HomeFeed from '../components/pins/home_feed_container';
 import PinProfile from './pins/pin_profile_container';
-
+import SplashPage from './splash';
 
 const App = () => (
     <>
@@ -27,7 +27,7 @@ const App = () => (
             <ProtectedRoute exact path='/boards/:boardId' component={BoardProfile} />
             <ProtectedRoute exact path='/pins/new' component={NewPinForm} />
             <ProtectedRoute exact path='/pins/:pinId' component={PinProfile} />
-            <Route exact path="/" render={() => <h1> </h1>} />
+            <AuthRoute exact path="/" component={SplashPage} />
             <ProtectedRoute exact path="/home" component={HomeFeed} />
             <Redirect to="/404" />
         </Switch>

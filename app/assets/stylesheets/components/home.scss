@@ -11,6 +11,7 @@
 //   height: auto;
 // }
 
+
 .masonry{
  column-count: 5;
  column-gap: 20px;
@@ -18,8 +19,8 @@
  grid-auto-rows: 0;
 
  .subtitle{
-    font-family: 'Roboto', sans-serif;
-    padding-top: 2px;
+   font-family: 'Roboto', sans-serif;
+   padding: 6px 4px;
  }
 }
 .masonry-image{
@@ -37,5 +38,49 @@
 }
 
 .masonry-image img:hover{
-   box-shadow: 0 0 11px rgba(33,33,33,.2);
+   box-shadow: 0 0 11px rgba(33, 33, 33, 0.459);
+}
+
+.splash-container{
+  width:100vw;
+  height: 100vh;
+  position:relative;
+  overflow-y: hidden;
+  // padding: 0px 10px;
+}
+.splash-header{
+  text-align:center;
+  font-weight: 500;
+  font-size: 3vw;
+  font-family: 'Roboto', sans-serif;
+      color: #c50b09;
+    margin-top: 80px;
+}
+.splash-columns{
+  position: absolute;
+    column-count: 5;
+    column-gap: 30px;
+    grid-auto-rows: 0;
+    top: 60px;
+    overflow-y: hidden;
+    
+}
+.splash-img > img{
+  column-fill:auto;
+  display: inline-block;
+  width: 100%;
+  border-radius: 10px;
+  background-image:linear-gradient(to bottom, transparent, white)
+}
+
+.splash-img#col-2{
+  padding-top:135px;
+  page-break-inside: avoid;
+}
+
+.splash-img#col-3{
+  padding-top:215px;
+}
+.splash-img#col-4{
+  padding-top:135px;
 }
