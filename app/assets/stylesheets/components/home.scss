@@ -70,17 +70,43 @@
   display: inline-block;
   width: 100%;
   border-radius: 10px;
-  background-image:linear-gradient(to bottom, transparent, white)
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  // animation-fill-mode: both;
+}
+.splash-img#col-1 img{
+    animation-delay: .04s;
 }
 
 .splash-img#col-2{
   padding-top:135px;
   page-break-inside: avoid;
+  img{
+    animation-delay: .06s;
+  }
 }
 
 .splash-img#col-3{
   padding-top:215px;
+   img{
+    animation-delay: .08s;
+  }
 }
 .splash-img#col-4{
   padding-top:135px;
+  img{
+    animation-delay: .1s;
+  }
 }
+.splash-img#col-4 img{
+    animation-delay: .12s;
+}
+
+// @-webkit-keyframes fadeIn {
+//   0% {opacity: 0;}
+//   100% {opacity: 1;}
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+} 
