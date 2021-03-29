@@ -3,12 +3,14 @@
     display:flex;
     justify-content: center;
     position: relative;
+    padding: 15px 0px;
     .back-arrow{
-        position: absolute;
-        left:22px;
-        top:10px;
-        height:30px;
-        width:30px;
+        position: fixed;
+        left: 0;
+        left: 22px;
+        top: 95px;
+        height: 30px;
+        width: 30px;
     }
     .back-arrow:hover{
         border-radius: 50%;

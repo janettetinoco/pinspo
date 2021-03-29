@@ -7,7 +7,7 @@ export const RECEIVE_BOARD_PIN_ERRORS = "RECEIVE_BOARD_PIN_ERRORS";
 //         type
 //     }
 // }
-export const receivePinToBoardErrors = () => {
+export const receivePinToBoardErrors = (errors) => {
     return {
         type: RECEIVE_BOARD_PIN_ERRORS,
         errors

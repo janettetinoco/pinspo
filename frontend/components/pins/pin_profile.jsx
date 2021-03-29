@@ -16,6 +16,13 @@ class PinProfile extends React.Component{
         this.redirectTo = this.redirectTo.bind(this)
     }
 
+    addFollow(author_id){
+        this.props.followUser({
+            follower_id: this.props.currentUser,
+            following_id: author_id
+        })
+    }
+
     attachPin(){
         this.props.createPinToBoard(this.state).then(()=>{
             document.getElementsByClassName('save-button')[0].classList.add('hidden');
@@ -105,7 +112,7 @@ class PinProfile extends React.Component{
                                 </div>
                             </div>
                             
-                            <div className="pin-follow-user"><span>Follow</span></div>
+                            <div onClick={this.addFollow} className="pin-follow-user"><span>Follow</span></div>
                         </div>
                     </div>
 

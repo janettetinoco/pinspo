@@ -6,7 +6,7 @@ import boardsReducer from './boards_reducer';
 const entitiesReducer = combineReducers({
     users: usersReducer,
     boards: boardsReducer,
-    pins: pinsReducer
+    pins: pinsReducer,
 })
 
 export default entitiesReducer;

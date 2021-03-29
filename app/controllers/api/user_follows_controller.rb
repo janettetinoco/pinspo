@@ -2,7 +2,6 @@ class Api::UserFollowsController < ApplicationController
      def create
         @user_follow = UserFollow.new(user_follow_params)
         if @user_follow.save
-            render 'api/board_pins/show'
             #send nothing back yet
         else
             render json: @user_follow.errors.full_messages, status: 422
@@ -10,15 +9,23 @@ class Api::UserFollowsController < ApplicationController
     end
 
     def destroy
-        @user_follow = UserFollow.where("follower_id ? AND following_id=?", user_follow_params[:follower_id],  user_follow_params[:following_id])
-        if @user_follow.destroy
+        @user_follow = UserFollow.where("follower_id = ? AND following_id = ?", params[:id],  user_follow_params[:following_id])
+        if UserFollow.delete(@user_follow)
         else
             render json: @user_follow.errors.full_messages, status: 422
         end
     end
 
+    def show
+        @user_following = UserFollow.where("follower_id = ?", params[:id])
+        if @user_following
+            render 'api/user_follows/show'
+        else
+        end
+    end
+
     private
     def user_follow_params
-        params.require(:user_follow).permit(:follower_id, :following_id)
+        params.require(:user_follow).permit(:following_id)
     end
 end
