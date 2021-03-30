@@ -1,7 +1,6 @@
 # pinspo
 
 ## Live Link
-<<<<<<< HEAD
 ---
 [Here is a live link to this Pintererst clone website](https://pinspo.herokuapp.com/#/)
 =======
