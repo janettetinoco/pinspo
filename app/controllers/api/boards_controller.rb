@@ -29,6 +29,7 @@ class Api::BoardsController < ApplicationController
 
     def update
         @board = Board.find_by(id: params[:id])
+        @board_pins = BoardPin.where(board_id: params[:id])
         if @board.update(board_params)
             render 'api/boards/show'
         else
