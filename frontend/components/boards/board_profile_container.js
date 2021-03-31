@@ -4,6 +4,7 @@ import {openModal} from '../../actions/modal_actions';
 import {getBoard,  getUserBoards} from '../../actions/board_actions'
 import {withRouter} from 'react-router-dom';
 import { requestAllPins } from '../../actions/pin_actions';
+import {removePinFromBoard} from '../../actions/board_pin_actions';
 
 
 
@@ -25,7 +26,9 @@ const mapDispatchToProps = () => {
         openModal: (modal, boardId) => dispatch(openModal(modal, boardId)),
         getBoard: (boardId) => dispatch(getBoard(boardId)),
         getUserBoards: (id) => dispatch(getUserBoards(id)),
-        requestAllPins: () => dispatch(requestAllPins())
+        requestAllPins: () => dispatch(requestAllPins()),
+        removePinFromBoard: (boardPin) => dispatch(removePinFromBoard(boardPin))
+
     })
 }
 
