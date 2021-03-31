@@ -70,3 +70,16 @@
         }
     }
 }
+
+.unpin-icon{
+    left: 2px;
+    top:2px;
+    position:absolute;
+    display: none;
+}
+
+.masonry-image:hover{
+    .unpin-icon{
+        display: block;
+    }
+}

@@ -40,8 +40,8 @@ export const receiveUserBoards = (userProfile) => {
 //gets a single board and its info
 export const getBoard = (boardId) => dispatch => {
         return BoardAPIUtil.fetchBoard(boardId)
-            .then((board) => dispatch(receiveBoard(board)),
-                (errors) =>dispatch(receiveBoardErrors(errors.responseJSON)));
+            .then((board) => dispatch(receiveBoard(board)).catch(
+                (errors) =>dispatch(receiveBoardErrors(errors.responseJSON))));
 }
 
 //creates a board

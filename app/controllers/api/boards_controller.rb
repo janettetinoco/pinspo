@@ -1,6 +1,7 @@
 class Api::BoardsController < ApplicationController
     def create
           @board = Board.new(board_params)
+          @board_pins = [];
         if @board.save
             render 'api/boards/show'
         else
@@ -12,6 +13,9 @@ class Api::BoardsController < ApplicationController
         @board = Board.find_by(id: params[:id])
         @board_pins = BoardPin.where(board_id: params[:id])
         if @board
+            if !@board_pins
+                @board_pins = []
+            end
             render 'api/boards/show'
         else
             render json: ['Board not found'], status: 422

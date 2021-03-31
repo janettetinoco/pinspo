@@ -18,6 +18,11 @@ class Api::BoardPinsController < ApplicationController
         end
     end
 
+    def unpin
+        # @board_pin = BoardPin.where()
+
+    end
+
     private
     def board_pin_params
         params.require(:board_pin).permit(:pin_id, :board_id)

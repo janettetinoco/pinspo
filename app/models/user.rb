@@ -2,7 +2,7 @@ class User < ApplicationRecord
     validates :username, :email, :session_token, presence: true, uniqueness: true
     validates :password_digest, presence: true
     validates :password, length: {minimum: 6}, allow_nil: true
-    validates :age, presence:true, numericality: { only_integer: true, greater_than: 0, message: 'needs to be fixed'}
+    validates :age, presence:true, numericality: { only_integer: true, greater_than: 0, message: 'is not valid'}
 
     has_many :pins,
         primary_key: :id,
