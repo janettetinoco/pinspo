@@ -40,7 +40,7 @@ export const receiveUserBoards = (userProfile) => {
 //gets a single board and its info
 export const getBoard = (boardId) => dispatch => {
         return BoardAPIUtil.fetchBoard(boardId)
-            .then((board) => dispatch(receiveBoard(board)).catch(
+            .then((board) => dispatch(receiveBoard(board),
                 (errors) =>dispatch(receiveBoardErrors(errors.responseJSON))));
 }
 

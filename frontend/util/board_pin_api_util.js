@@ -5,3 +5,11 @@ export const createPinToBoard = (board_pin) => {
         data: { board_pin }
     })
 }
+
+export const unpinFromBoard = (board_pin) => {
+    return $.ajax({
+        method: 'DELETE',
+        url:'/api/board_pin/unpin',
+        data: { board_pin }
+    })
+}
