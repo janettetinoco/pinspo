@@ -5,8 +5,9 @@ import {withRouter} from 'react-router-dom';
 class Boards extends React.Component{
 
     render(){
+        debugger
         const {boards, history, openModal, currentUser, userId, pins} = this.props
-        const boardPics ={};
+        let boardPics ={};
         Object.keys(pins).map((id) => {
             if(boards[pins[id].board_id]){
                 if (!boardPics[pins[id].board_id]){

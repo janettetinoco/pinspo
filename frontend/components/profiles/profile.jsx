@@ -43,6 +43,7 @@ class Profile extends React.Component{
             return null
         }
         const user = this.props.userInfo;
+        debugger
         
         return(
             <div className="profile-component">

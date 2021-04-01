@@ -2,6 +2,10 @@ class Api::UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
+        @board_pins = BoardPin.where(author_id: params[:id])
+        if(!@board_pins)
+            @board_pins = [];
+        end
         render "api/users/show"
     end
     def create
