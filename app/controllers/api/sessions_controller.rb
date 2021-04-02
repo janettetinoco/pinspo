@@ -4,9 +4,12 @@ class Api::SessionsController < ApplicationController
         params[:user][:email],
         params[:user][:password]
         )
-
         if @user
             login(@user)
+            @board_pins = BoardPin.where(author_id: @user.id)
+            if(!@board_pins)
+                @board_pins = [];
+            end
             render "api/users/show"
         else
             render json: ["Invalid username/password combination"], status: 401

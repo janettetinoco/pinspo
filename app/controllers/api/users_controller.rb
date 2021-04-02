@@ -10,7 +10,7 @@ class Api::UsersController < ApplicationController
     end
     def create
         @user = User.new(user_params)
-
+        @boarD_pins = []
         if @user.save
             login(@user)
             #will need to render the boards show page
