@@ -5,17 +5,14 @@ import {withRouter} from 'react-router-dom';
 class Boards extends React.Component{
 
     render(){
-        debugger
-        const {boards, history, openModal, currentUser, userId, pins} = this.props
+        const {boards, history, openModal, currentUser, userId, pins, pinned} = this.props
         let boardPics ={};
-        Object.keys(pins).map((id) => {
-            if(boards[pins[id].board_id]){
-                if (!boardPics[pins[id].board_id]){
-                    boardPics[pins[id].board_id] = [pins[id].photoURL]
-                }else{
-                    boardPics[pins[id].board_id].push(pins[id].photoURL)
-                }
-            }
+        Object.keys(pinned).map((board_id) => {  
+            let pics = [];     
+            pinned[board_id].forEach((pin_id) => {
+                pics.push(pins[pin_id].photoURL)
+            })
+            boardPics[board_id]=pics;
         })
        return(
            <div  className="boards-grid">

@@ -6,7 +6,8 @@ class PinProfile extends React.Component{
         super(props);
         this.state ={
             board_id:"",
-            pin_id: ""
+            pin_id: "",
+            author_id:this.props.currentUser
         }
        
 

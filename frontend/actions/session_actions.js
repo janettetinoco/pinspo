@@ -22,7 +22,6 @@ export const login = (user) => dispatch => {
     return(
         SessionAPIUTil.login(user)
             .then((user) => {
-                debugger
                 return dispatch(receiveCurrentUser(user))
             }, err => (dispatch(receiveErrors(err.responseJSON))))
     )

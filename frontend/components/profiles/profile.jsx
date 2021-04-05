@@ -43,7 +43,6 @@ class Profile extends React.Component{
             return null
         }
         const user = this.props.userInfo;
-        debugger
         
         return(
             <div className="profile-component">
@@ -77,7 +76,8 @@ class Profile extends React.Component{
                             openModal={this.props.openModal} 
                             userId={this.props.userId} 
                             currentUser={this.props.currentUser}
-                            pins={this.props.pins}/>
+                            pins={this.props.pins}
+                            pinned={this.props.pinned}/>
                 </div>
 
             </div>
