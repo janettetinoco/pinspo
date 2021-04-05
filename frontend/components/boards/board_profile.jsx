@@ -62,7 +62,7 @@ class BoardProfile extends React.Component{
                 </div>
                 
                 <div>
-                    <Pins pins={this.props.pins} boardId={this.props.boardId} boardPins={board.pins} removePinFromBoard={this.props.removePinFromBoard}/>
+                    <Pins pins={this.props.pins} boardId={this.props.boardId} boardPins={board.pins} removePinFromBoard={this.props.removePinFromBoard} getBoard={this.props.getBoard}/>
                 </div>
 
 

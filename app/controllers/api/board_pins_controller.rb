@@ -20,8 +20,10 @@ class Api::BoardPinsController < ApplicationController
 
     def unpin
         @board_pin = BoardPin.where('board_id=? AND pin_id=?', board_pin_params[:board_id], board_pin_params[:pin_id])
+        author = @board_pin[0].author_id
         if BoardPin.delete(@board_pin)
-            render json: ['successfuly unpinned'], status: 200
+            @board_pins = BoardPin.where(author_id: author)
+            render 'api/board_pins/show'
         else
             render json: ['Could not unpin'], status: 422
         end
