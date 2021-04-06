@@ -15,9 +15,9 @@ class HomeFeed extends React.Component{
         }
         return(
             <div>
-                <div className="masonry">
-                    {Object.keys(pins).map((key) => <Link to={`/pins/${key}`}><div  className="masonry-image"><img src={pins[key].photoURL} /></div></Link>)}
-                </div>
+                <ul className="masonry">
+                    {Object.keys(pins).map((key) => <Link key={key} to={`/pins/${key}`}><li className="masonry-image"><img src={pins[key].photoURL} /></li></Link>)}
+                </ul>
             </div>
         )
     }

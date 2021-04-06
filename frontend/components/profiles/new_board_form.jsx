@@ -44,7 +44,7 @@ class NewBoardForm extends React.Component{
                 <div className="new-board-form">
                     <div >
                         <form className="form-container"> 
-                            <label className="board-info">Name</label>
+                            <label className="board-info">Title</label>
                             <div className="board-input">
                                 <input type="text" placeholder='Like "Places to Travel" or "Recipes to Try" ' value={this.state.title} onChange={this.update('title')}></input>
                             </div>

@@ -56,8 +56,8 @@ class PinProfile extends React.Component{
     }
     updateBoard(){
         return (e) => {
-            this.setState({ board_id: e.target.value, pin_id: this.props.pin.id });
-            document.getElementsByClassName("boards-dropdown.dropdown-open")[0].classList.remove("dropdown-open");
+            this.setState({ board_id: e.target.value, pin_id: this.props.pin.id })
+            document.getElementsByClassName("boards-dropdown.dropdown-open")[0].classList.remove("dropdown-open")
 
         }
     }
