@@ -5,6 +5,7 @@ import {requestPin} from '../../actions/pin_actions';
 import { getUserBoards } from '../../actions/board_actions';
 import {createPinToBoard} from '../../actions/board_pin_actions';
 import {followUser} from '../../actions/user_follow_actions';
+import {openModal} from '../../actions/modal_actions';
 
 const mapStateToProps = (state={}, ownProps) => {
     const pinId = parseInt(ownProps.match.params.pinId);
@@ -22,7 +23,8 @@ const mapDispatchToProps = (dispatch) => {
         requestPin: (pinId) => dispatch(requestPin(pinId)),
         getUserBoards:(userId) => dispatch(getUserBoards(userId)),
         createPinToBoard:(boardPin) => dispatch(createPinToBoard(boardPin)),
-        followUser:(userFollow) => dispatch(followUser(userFollow))
+        followUser:(userFollow) => dispatch(followUser(userFollow)),
+        openModal: (modal, boardId) => dispatch(openModal(modal, boardId))
     })
 }
 

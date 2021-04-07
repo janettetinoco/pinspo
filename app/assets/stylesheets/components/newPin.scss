@@ -169,7 +169,7 @@ input#upload {
     }
 
     .boards-dropdown{
-        display:none
+        display:none;
     }
     .dropdown-open{
         position: absolute;
@@ -181,6 +181,25 @@ input#upload {
         overflow-x:hidden;
         overflow-y:auto;
         // transform: translate(-10px, 50px);
+        li{
+           justify-content: center;
+            text-align: center;
+            display: flex;
+            align-items: center; 
+        }
 
+    }
+}
+
+.new-board-option{
+    padding-bottom: 3px;
+    color: #b6b4b4;
+    img{
+        height: 20px;
+        width: 23px;
+        border-radius: 5px;
+        margin-right: 4px;
+        background-color: #d2d1d1;
+        padding: 1px;
     }
 }

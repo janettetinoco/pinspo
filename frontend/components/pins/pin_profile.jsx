@@ -88,6 +88,7 @@ class PinProfile extends React.Component{
                                             <ul className="boards-dropdown">
                                                 <h1 className="dropdown-subtitle">All boards</h1>
                                                 {Object.values(boards).map((board, key) => <li key={key} className=" menu-option" value={`${board.id}`} onClick={this.updateBoard()}>{board.title}</li>)}
+                                                <li className="new-board-option" onClick={() => this.props.openModal('newBoard')}><img src="https://img.icons8.com/ios-glyphs/30/000000/plus-math.png" />Add New Board</li>
                                             </ul>
                                         </div>
                                         <div className="save-button" onClick={this.attachPin}><div>Save</div>

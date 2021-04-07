@@ -121,6 +121,7 @@ class NewPinForm extends React.Component{
                                         <ul className="boards-dropdown">
                                             <h1 className="dropdown-subtitle">All boards</h1>
                                             {boardKeys.map((key) => <li key={key} className=" menu-option" value={`${boards[key].id}`} onClick={this.updateBoard()}>{boards[key].title}</li>)}
+                                            <li className="new-board-option" onClick={() => this.props.openModal('newBoard')}><img src="https://img.icons8.com/ios-glyphs/30/000000/plus-math.png" />Add New Board</li>
                                         </ul>
                                     <div className="save-button" onClick={this.handleSubmit}><div>Save</div></div>
                                 </div>
