@@ -114,6 +114,7 @@
 
 
 .boards-grid{
+    width:100vw;
     padding: 0px 50px;
     display:grid;
     grid-template-columns: repeat( 5, minmax(265px, 1fr) );

@@ -111,7 +111,7 @@ class PinProfile extends React.Component{
                                 </div>
                             </div>
                             
-                            <div onClick={this.addFollow} className="pin-follow-user"><span>Follow</span></div>
+                            {/* <div onClick={this.addFollow} className="pin-follow-user"><span>Follow</span></div> */}
                         </div>
                     </div>
 

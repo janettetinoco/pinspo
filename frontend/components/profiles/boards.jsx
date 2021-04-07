@@ -7,9 +7,10 @@ class Boards extends React.Component{
     render(){
         const {boards, history, openModal, currentUser, userId, pins, pinned} = this.props
         let boardPics ={};
-        Object.keys(pinned).map((board_id) => {  
+        Object.keys(pinned).forEach((board_id) => {  
             let pics = [];     
             pinned[board_id].forEach((pin_id) => {
+                if (!pins[pin_id]) return null
                 pics.push(pins[pin_id].photoURL)
             })
             boardPics[board_id]=pics;
