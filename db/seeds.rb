@@ -29,13 +29,13 @@ board13 = Board.create(title: "Organization Ideas", description: "", author_id: 
 board5 = Board.create(title: "Birthday Party Ideas", description: "Kids' Birthdays", author_id: user1.id)#
 board7 = Board.create(title: "Spring Fashion", description: "", author_id: user1.id)#
 
-board9 = Board.create(title: "Christmas", description: "low sugar", author_id: user3.id)
+board9 = Board.create(title: "Christmas", description: "low sugar", author_id: user3.id)#
 board10 = Board.create(title: "Fashion", description: "", author_id: user3.id)#
 
 board11 = Board.create(title: "Recipes", description: "Healthy and Not", author_id: user4.id)#
 
-board3 = Board.create(title: "Cars", description: "", author_id: user5.id)
-board8 = Board.create(title: "Places to Visit", description: "within the US", author_id: user5.id)
+board3 = Board.create(title: "Cars", description: "", author_id: user5.id)#
+board8 = Board.create(title: "Places to Visit", description: "within the US", author_id: user5.id)#
 board12 = Board.create(title: "Organization Ideas", description: "for closet in bedroom", author_id: user5.id)#
 
 Pin.delete_all
@@ -112,12 +112,12 @@ image63= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/loverly-wedding-ins
 image64= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/Rolls-Royce-Vintage-Car-Wedding-Decor-Florida-Inspo-18-600x800.jpg')
 
 #car
-# image40= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-4.jpg')
-# image41= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-5.jpg')
-# image42= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-1.jpg')
-# image43= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-2.jpg')
-# image44= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-3.jpg')
-# image37= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-6.jpg')
+image65= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-4.jpg')
+image66= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-5.jpg')
+image67= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-1.jpg')
+image68= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-2.jpg')
+image69= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-3.jpg')
+image70= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-6.jpg')
 
 # #baby
 # image45= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/baby-1.jpg')
@@ -128,11 +128,11 @@ image64= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/Rolls-Royce-Vintage
 # image77= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/where-to-put-a-man-cave-garage.jpg')
 
 # #xmas
-# image38= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/Christmas_Tree_with_Burgundy__Copper_and_Platinum-12-879x1024.jpg')
-# image35= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/christmas-decoration-ideas-1598219821.jpg')
+image72= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/Christmas_Tree_with_Burgundy__Copper_and_Platinum-12-879x1024.jpg')
+image73= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/christmas-decoration-ideas-1598219821.jpg')
 
 # #travel
-# image40= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/pic-goal-snow-Favim.com-6524350.jpg')
+image71= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/pic-goal-snow-Favim.com-6524350.jpg')
 
 
 
@@ -196,6 +196,15 @@ pin56 = Pin.create(title:"Outdoor Wedding", author_id: demo.id, board_id: board4
 pin57 = Pin.create(title:"Beach Reception", author_id: demo.id, board_id: board4.id)
 pin58 = Pin.create(title:"Sunflower Fields Photography", author_id: demo.id, board_id: board4.id)
 pin59 = Pin.create(title:"Vintage Car Wedding Photography", author_id: demo.id, board_id: board4.id)
+pin60 = Pin.create(title:"In the Hills, Black Vintage", author_id: user5.id, board_id: board3.id)
+pin61 = Pin.create(title:"Copper Accents", author_id: user5.id, board_id: board3.id)
+pin62 = Pin.create(title:"A Car for a Pink Lady", author_id: user5.id, board_id: board3.id)
+pin63 = Pin.create(title:"Sunset Drive", author_id: user5.id, board_id: board3.id)
+pin64 = Pin.create(title:"Retro Buggy", author_id: user5.id, board_id: board3.id)
+pin65 = Pin.create(title:"Golden Lambo", author_id: user5.id, board_id: board3.id)
+pin66 = Pin.create(title:"Winter Getaway", author_id: user5.id, board_id: board8.id)
+pin67 = Pin.create(title:"Rustic Christmas", author_id: user3.id, board_id: board9.id)
+pin68 = Pin.create(title:"Plaid Plaid Plaid", author_id: user3.id, board_id: board9.id)
 
 
 
@@ -260,6 +269,14 @@ board_pin56 = BoardPin.create(board_id: pin56.board_id, pin_id: pin56.id, author
 board_pin57 = BoardPin.create(board_id: pin57.board_id, pin_id: pin57.id, author_id: pin57.author_id)
 board_pin58 = BoardPin.create(board_id: pin58.board_id, pin_id: pin58.id, author_id: pin58.author_id)
 board_pin59 = BoardPin.create(board_id: pin59.board_id, pin_id: pin59.id, author_id: pin59.author_id)
+board_pin60 = BoardPin.create(board_id: pin60.board_id, pin_id: pin60.id, author_id: pin60.author_id)
+board_pin61 = BoardPin.create(board_id: pin61.board_id, pin_id: pin61.id, author_id: pin61.author_id)
+board_pin62 = BoardPin.create(board_id: pin62.board_id, pin_id: pin62.id, author_id: pin62.author_id)
+board_pin63 = BoardPin.create(board_id: pin63.board_id, pin_id: pin63.id, author_id: pin63.author_id)
+board_pin64 = BoardPin.create(board_id: pin64.board_id, pin_id: pin64.id, author_id: pin64.author_id)
+board_pin65 = BoardPin.create(board_id: pin65.board_id, pin_id: pin65.id, author_id: pin65.author_id)
+board_pin66 = BoardPin.create(board_id: pin66.board_id, pin_id: pin66.id, author_id: pin66.author_id)
+board_pin67 = BoardPin.create(board_id: pin67.board_id, pin_id: pin67.id, author_id: pin67.author_id)
 
 
 
@@ -322,3 +339,12 @@ pin56.image.attach(io:image61, filename: 'outdoorwedding.jpg')
 pin57.image.attach(io:image62, filename: 'beachwedding.jpg')
 pin58.image.attach(io:image63, filename: 'sunflowerwedding.jpg')
 pin59.image.attach(io:image64, filename: 'vintagecarwedding.jpg')
+pin60.image.attach(io:image65, filename: 'vintagecarwedding.jpg')
+pin61.image.attach(io:image66, filename: 'vintagecarwedding.jpg')
+pin62.image.attach(io:image67, filename: 'vintagecarwedding.jpg')
+pin63.image.attach(io:image68, filename: 'vintagecarwedding.jpg')
+pin64.image.attach(io:image69, filename: 'vintagecarwedding.jpg')
+pin65.image.attach(io:image70, filename: 'vintagecarwedding.jpg')
+pin66.image.attach(io:image71, filename: 'vintagecarwedding.jpg')
+pin67.image.attach(io:image72, filename: 'vintagecarwedding.jpg')
+pin68.image.attach(io:image73, filename: 'vintagecarwedding.jpg')
