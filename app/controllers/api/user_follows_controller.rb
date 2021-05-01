@@ -18,6 +18,14 @@ class Api::UserFollowsController < ApplicationController
 
     def show
         @user_following = UserFollow.where("follower_id = ?", params[:id])
+        @user_followers = UserFollow.where("following_id = ?", params[:id])
+        if(!@user_following)
+            @user_following = []
+        end
+        if(!@user_followers)
+            @user_followers = []
+        end
+
         if @user_following
             render 'api/user_follows/show'
         else
