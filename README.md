@@ -28,7 +28,26 @@ This feature allows new users to navigate the app as a registered user without h
 
 
 ### Pins
-This feature contains a file that is required an image and title, and an optional description and third party link. It is the core feature of the site that provides the images for users to share and collect.
+This feature contains a file that is required an image and title, and an optional description and third party link. It is the core feature of the site that provides the images for users to share and collect, therefore, an image is always required to create a pin.
+```ruby
+def create
+        if pin_params[:image] == "null"
+            return render json: ["You need to provide an image"], status: 401
+        end
+        @pin = Pin.new(pin_params)
+
+
+        if @pin.save
+            BoardPin.create(pin_id: @pin.id, board_id: @pin.board_id)
+            render 'api/pins/show'
+        else
+            render json: @pin.errors.full_messages, status: 422
+        end
+    end
+```
+
+Users can add the Pin to their desired collection, also called a Board.
+
 
 
 ### Boards
