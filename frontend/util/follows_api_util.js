@@ -13,3 +13,10 @@ export const destroyUserFollow = (user_following, user_follower) => {
         data: { user_follow }
     })
 }
+
+export const getfollows = (user_id) => {
+    return $.ajax({
+        method:'GET',
+        url:`/api/user_follows/${user_id}`
+    })
+}
