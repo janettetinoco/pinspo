@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: pinspoProduction
-  username: pinspo
-  password: <%= ENV['PINSPO_DATABASE_PASSWORD'] %>
+  host: <%= ENV[‘DB_HOST’] %>
+  port: 5432
+  database: <%= ENV[‘DB_DATABASE’] %>
+  username: <%= ENV[‘DB_USERNAME’] %>
+  password: <%= ENV[‘DB_PASSWORD’] %>
