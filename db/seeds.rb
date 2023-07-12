@@ -39,104 +39,104 @@ board8 = Board.create(title: "Places to Visit", description: "within the US", au
 board12 = Board.create(title: "Organization Ideas", description: "for closet in bedroom", author_id: user5.id)#
 
 Pin.delete_all
-image1 = open('https://pinspo-dev.s3-us-west-1.amazonaws.com/TrVA7zqt9V1cc9nTX1gYEkfF')
-image3 = open('https://pinspo-dev.s3-us-west-1.amazonaws.com/w3jRugVWyp29cKbNLYvr4ReU')
-image4 = open('https://pinspo-dev.s3-us-west-1.amazonaws.com/8cGWTv5nYsQz6UijFMhAAHd4')
-image6 = open('https://pinspo-dev.s3-us-west-1.amazonaws.com/icyNdXqMCUnmBnN6HvadascU')
-image8 = open('https://pinspo-dev.s3-us-west-1.amazonaws.com/3KdH94pp3nJJdVGsfXarDNP8')
-image10 = open('https://pinspo-dev.s3-us-west-1.amazonaws.com/hNqwN16aecx2va2xaCP1xasN')
-image12 = open('https://pinspo-dev.s3-us-west-1.amazonaws.com/a3JZLNKfseAivxHDPfefzigy')
-image13 = open('https://pinspo-dev.s3-us-west-1.amazonaws.com/closet_organization.jpg')
-image14 = open('https://pinspo-dev.s3-us-west-1.amazonaws.com/home_interior.jpg')
-image15 = open('https://pinspo-dev.s3-us-west-1.amazonaws.com/outfit_2.jpg')
-image16 = open('https://pinspo-dev.s3-us-west-1.amazonaws.com/plant_wall.jpg')
-image17= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/travel_idea.jpg')
-image18= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/travel_pack.jpg')
-image19= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/wedding.jpg')
+image1 = URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/TrVA7zqt9V1cc9nTX1gYEkfF').open
+image3 = URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/w3jRugVWyp29cKbNLYvr4ReU').open
+image4 = URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/8cGWTv5nYsQz6UijFMhAAHd4').open
+image6 = URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/icyNdXqMCUnmBnN6HvadascU').open
+image8 = URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/3KdH94pp3nJJdVGsfXarDNP8').open
+image10 = URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/hNqwN16aecx2va2xaCP1xasN').open
+image12 = URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/a3JZLNKfseAivxHDPfefzigy').open
+image13 = URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/closet_organization.jpg').open
+image14 = URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/home_interior.jpg').open
+image15 = URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/outfit_2.jpg').open
+image16 = URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/plant_wall.jpg').open
+image17= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/travel_idea.jpg').open
+image18= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/travel_pack.jpg').open
+image19= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/wedding.jpg').open
 
 #decor
-image20= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/pinterest-bathroom-designs-1.jpg')
-image21= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/home-decor-black-inspiration-tatiana-shishkina-project-1.jpg')
-image22= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/home-decor-instagram-accounts-8.jpg')
-image23= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/decor-3.jpg')
-image24= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/decor-4.jpg')
-image25= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/decor-5.jpg')
-image26= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/decor-1.jpg')
-image27= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/decor-2.jpg')
+image20= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/pinterest-bathroom-designs-1.jpg').open
+image21= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/home-decor-black-inspiration-tatiana-shishkina-project-1.jpg').open
+image22= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/home-decor-instagram-accounts-8.jpg').open
+image23= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/decor-3.jpg').open
+image24= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/decor-4.jpg').open
+image25= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/decor-5.jpg').open
+image26= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/decor-1.jpg').open
+image27= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/decor-2.jpg').open
 
 #recipes
-image28= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/Honey-Mustard-Pretzel-Chicken-and-Avocado-Bacon-Salad-1-700x1050.jpg')
-image29= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/Italian-Baked-Chicken-Recipe-6.jpg')
-image30= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/firecracker-chicken-1.jpg')
-image31= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/tofu-pad-thai-1607721747.jpg')
-image32= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/recipe-1.jpg')
-image33= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/salad.jpg')
-image34= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/cheesy-bacon-ranch-chicken-226.jpg')
-image35= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/chicken-bites-and-asparagus-recipe.jpg')
+image28= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/Honey-Mustard-Pretzel-Chicken-and-Avocado-Bacon-Salad-1-700x1050.jpg').open
+image29= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/Italian-Baked-Chicken-Recipe-6.jpg').open
+image30= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/firecracker-chicken-1.jpg').open
+image31= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/tofu-pad-thai-1607721747.jpg').open
+image32= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/recipe-1.jpg').open
+image33= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/salad.jpg').open
+image34= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/cheesy-bacon-ranch-chicken-226.jpg').open
+image35= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/chicken-bites-and-asparagus-recipe.jpg').open
 
 #party
-image36= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/Lego-Friends-themed-birthday-Party-Anikas-DIY-Life-8-700.jpg')
-image37= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/Sunshine-Birthday-Party-Ideas-Kenzie-7-Apr-2-2016-12-11-PM-560x893.jpg')
-image38= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/circus-birthday-party-1561740510.jpg')
-image39= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/pi-jungle-party-ideas-1.jpg')
-image40= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/party-1.jpg')
+image36= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/Lego-Friends-themed-birthday-Party-Anikas-DIY-Life-8-700.jpg').open
+image37= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/Sunshine-Birthday-Party-Ideas-Kenzie-7-Apr-2-2016-12-11-PM-560x893.jpg').open
+image38= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/circus-birthday-party-1561740510.jpg').open
+image39= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/pi-jungle-party-ideas-1.jpg').open
+image40= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/party-1.jpg').open
 
 #fashion
-image41= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/european-fashion-for-men-sage.jpg')
-image42= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/men-fash1.jpg')
-image43= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/men-fash2.jpg')
-image44= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/mens-fash4.jpg')
-image45= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/mens-fash5.png')
-image46= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/men-fash3.jpg')
-image47= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/men-fash9.png')
-image48= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/women-fash3.jpg')
-image49= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/women-fash8.jpg')
-image50= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/women-fash-7.jpg')
-image51= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/women-fash1.jpg')
-image52= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/women-fash2.jpg')
-image53= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/women-fash-4.png')
-image55= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/plus-size-fashion-the-everygirl-1.jpg')
+image41= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/european-fashion-for-men-sage.jpg').open
+image42= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/men-fash1.jpg').open
+image43= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/men-fash2.jpg').open
+image44= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/mens-fash4.jpg').open
+image45= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/mens-fash5.png').open
+image46= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/men-fash3.jpg').open
+image47= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/men-fash9.png').open
+image48= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/women-fash3.jpg').open
+image49= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/women-fash8.jpg').open
+image50= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/women-fash-7.jpg').open
+image51= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/women-fash1.jpg').open
+image52= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/women-fash2.jpg').open
+image53= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/women-fash-4.png').open
+image55= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/plus-size-fashion-the-everygirl-1.jpg').open
 
 #organization
-image54= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/classy-clutter-pantry-after.jpg')
-image56= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/pantryideas-1610653336.png')
-image57= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/Pantry-Organization-683x1024.jpg')
+image54= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/classy-clutter-pantry-after.jpg').open
+image56= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/pantryideas-1610653336.png').open
+image57= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/Pantry-Organization-683x1024.jpg').open
 
 #wedding
-image58= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/wedding-4.jpg')
-image59= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/wedding-6.jpg')
-image60= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/wedding-2.png')
-image61= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/wedding-3.jpg')
-image62= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/wedding-1.jpg')
-image63= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/loverly-wedding-inspiration.jpg')
-image64= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/Rolls-Royce-Vintage-Car-Wedding-Decor-Florida-Inspo-18-600x800.jpg')
+image58= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/wedding-4.jpg').open
+image59= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/wedding-6.jpg').open
+image60= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/wedding-2.png').open
+image61= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/wedding-3.jpg').open
+image62= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/wedding-1.jpg').open
+image63= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/loverly-wedding-inspiration.jpg').open
+image64= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/Rolls-Royce-Vintage-Car-Wedding-Decor-Florida-Inspo-18-600x800.jpg').open
 
 #car
-image65= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-4.jpg')
-image66= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-5.jpg')
-image67= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-1.jpg')
-image68= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-2.jpg')
-image69= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-3.jpg')
-image70= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-6.jpg')
+image65= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-4.jpg').open
+image66= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-5.jpg').open
+image67= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-1.jpg').open
+image68= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-2.jpg').open
+image69= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-3.jpg').open
+image70= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/car-6.jpg').open
 
 # #baby
-# image45= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/baby-1.jpg')
-# image61= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/Neutral%2BNursery%2BInspiration.jpg')
+# image45= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/baby-1.jpg').open
+# image61= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/Neutral%2BNursery%2BInspiration.jpg').open
 
 # #mancave
-# image68= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/man-cave-ideas-1582667003.jpg')
-# image77= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/where-to-put-a-man-cave-garage.jpg')
+# image68= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/man-cave-ideas-1582667003.jpg').open
+# image77= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/where-to-put-a-man-cave-garage.jpg').open
 
 # #xmas
-image72= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/Christmas_Tree_with_Burgundy__Copper_and_Platinum-12-879x1024.jpg')
-image73= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/christmas-decoration-ideas-1598219821.jpg')
+image72= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/Christmas_Tree_with_Burgundy__Copper_and_Platinum-12-879x1024.jpg').open
+image73= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/christmas-decoration-ideas-1598219821.jpg').open
 
 # #travel
-image71= open('https://pinspo-dev.s3-us-west-1.amazonaws.com/pic-goal-snow-Favim.com-6524350.jpg')
+image71= URI.parse('https://pinspo-dev.s3-us-west-1.amazonaws.com/pic-goal-snow-Favim.com-6524350.jpg').open
 
 
 
-pin1 = Pin.create(title: "rainbow organization", author_id: user5.id, board_id: board12.id)
+pin1 = Pin.new(title: "rainbow organization", author_id: user5.id, board_id: board12.id)
 pin2 = Pin.create(title: "old car rides", author_id: user5.id, board_id: board3.id)
 pin3 = Pin.create(title: "Vintage Red", author_id: user5.id, board_id: board3.id)
 pin4 = Pin.create(title: "Arizona Hot Air Ballons", author_id: demo.id, board_id: board2.id)
